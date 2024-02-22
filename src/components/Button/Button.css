@@ -1,0 +1,14 @@
+.new-video {
+  background-color: transparent;
+  color: var(--secondary-color);
+  font-size: var(--font-size-body-medium);
+  border: 1px solid var(--grey-light-color);
+}
+
+.new-video:hover {
+  border-color: #646cff;
+}
+.new-video:focus,
+.new-video:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
