@@ -1,0 +1,15 @@
+.movie-banner {
+  position: relative;
+  min-height: 70vh;
+  background-size: cover;
+  background-position: left;
+  display: flex;
+  align-items: center;
+}
+
+.banner-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 40%;
+}

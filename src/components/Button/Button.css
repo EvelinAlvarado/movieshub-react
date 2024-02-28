@@ -12,3 +12,11 @@
 .new-video:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+
+.play-now-button {
+  background-color: var(--primary-color);
+}
+
+.play-now-button:hover {
+  background-color: #191a3a;
+}
