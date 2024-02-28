@@ -15,8 +15,21 @@
 
 .play-now-button {
   background-color: var(--primary-color);
+  font-size: var(--font-size-body-small);
 }
 
 .play-now-button:hover {
   background-color: #191a3a;
+}
+
+@media (min-width: 768px) {
+  .play-now-button {
+    font-size: var(--font-size-body-medium);
+  }
+}
+
+@media (min-width: 1200px) {
+  .play-now-button {
+    font-size: var(--font-size-body-big);
+  }
 }

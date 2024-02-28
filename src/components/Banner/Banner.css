@@ -1,8 +1,8 @@
 .movie-banner {
   position: relative;
-  min-height: 70vh;
+  min-height: 50vh;
   background-size: cover;
-  background-position: left;
+  background-position: center;
   display: flex;
   align-items: center;
 }
@@ -12,4 +12,60 @@
   flex-direction: column;
   align-items: flex-start;
   max-width: 40%;
+  z-index: 1;
+}
+
+.banner-content h1 {
+  font-size: var(--font-size-body-big);
+  margin-bottom: 10px;
+}
+
+/* Hide paragraphs on smaller screens */
+.banner-content p {
+  display: none;
+}
+
+/* Styles for medium and large screens */
+@media (min-width: 767px) {
+  .movie-banner {
+    background-position: center;
+  }
+  .banner-content {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .banner-content h1 {
+    font-size: var(--font-size-title-medium);
+    margin-bottom: 10px;
+  }
+  .banner-content p {
+    font-size: var(--font-size-body-small);
+    font-weight: lighter;
+    display: flex;
+    gap: 6px;
+    margin-bottom: 5px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .movie-banner {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .banner-content {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .banner-content h1 {
+    font-size: var(--font-size-title-big);
+    margin-bottom: 20px;
+  }
+  .banner-content p {
+    font-size: var(--font-size-body-medium);
+    font-weight: lighter;
+    display: flex;
+    gap: 6px;
+    margin-bottom: 10px;
+  }
 }

@@ -10,7 +10,7 @@ export const Banner = ({
   duration,
 }) => {
   const bannerStyle = {
-    backgroundImage: `url(${backgroundImageUrl})`,
+    backgroundImage: `linear-gradient(90deg, rgba(25, 25, 25, 1) 0%, rgba(25, 25, 25, 0.5) 50%), url(${backgroundImageUrl})`,
   };
   return (
     <section className="movie-banner container" style={bannerStyle}>
