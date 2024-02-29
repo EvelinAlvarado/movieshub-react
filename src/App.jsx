@@ -1,7 +1,8 @@
-import "./App.css";
 import { Header } from "./components/Header/Header.jsx";
 import { Footer } from "./components/Footer/Footer.jsx";
 import { Banner } from "./components/Banner/Banner.jsx";
+import { SyncedSliders } from "./components/SyncedSliders/SyncedSliders.jsx";
+import "./App.css";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           releaseYear="2023"
           duration="2h 32min"
         />
+        <SyncedSliders />
       </main>
       <Footer />
     </>
