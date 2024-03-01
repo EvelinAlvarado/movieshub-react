@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import { Banner } from "../Banner/Banner";
 import { MovieCard } from "../MovieCard/MovieCard";
 import { dataMovieList } from "/src/assets/moviesData.js";
+import "./SyncedSliders.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -19,20 +20,19 @@ export const SyncedSliders = () => {
 
   const bannerSettings = {
     arrows: false,
+    adaptiveHeight: true,
   };
   const categorySettings = {
     infinite: true,
-    slidesToShow: 6,
+    slidesToShow: 5,
     swipeToSlide: true,
     focusOnSelect: true,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 5,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true,
+          slidesToShow: 4,
+          slidesToScroll: 1,
         },
       },
       {
@@ -53,7 +53,7 @@ export const SyncedSliders = () => {
   };
 
   return (
-    <div className="slider-container container">
+    <section className="sliders-container">
       <h4>Banner</h4>
       <Slider
         asNavFor={nav2}
@@ -72,20 +72,23 @@ export const SyncedSliders = () => {
         ))}
         {console.log(dataMovieList)}
       </Slider>
+
       <h4>Category Slider</h4>
-      <Slider
-        asNavFor={nav1}
-        ref={(slider) => (sliderRef2 = slider)}
-        {...categorySettings}
-      >
-        {dataMovieList.map((item) => (
-          <MovieCard
-            key={item.id}
-            posterUrl={item.posterUrl}
-            title={item.title}
-          />
-        ))}
-      </Slider>
-    </div>
+      <div className="slider-category container">
+        <Slider
+          asNavFor={nav1}
+          ref={(slider) => (sliderRef2 = slider)}
+          {...categorySettings}
+        >
+          {dataMovieList.map((item) => (
+            <MovieCard
+              key={item.id}
+              posterUrl={item.posterUrl}
+              title={item.title}
+            />
+          ))}
+        </Slider>
+      </div>
+    </section>
   );
 };

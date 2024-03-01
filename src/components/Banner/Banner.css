@@ -1,6 +1,7 @@
 .movie-banner {
+  width: 100%;
   position: relative;
-  min-height: 50vh;
+  min-height: 70vh;
   background-size: cover;
   background-position: center;
   display: flex;
@@ -50,12 +51,13 @@
 @media (min-width: 1200px) {
   .movie-banner {
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
   }
   .banner-content {
     padding-top: 40px;
     padding-bottom: 40px;
+    max-width: 500px;
   }
   .banner-content h1 {
     font-size: var(--font-size-title-big);

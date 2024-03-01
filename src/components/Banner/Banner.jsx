@@ -13,8 +13,8 @@ export const Banner = ({
     backgroundImage: `linear-gradient(90deg, rgba(25, 25, 25, 1) 0%, rgba(25, 25, 25, 0.5) 50%), url(${backgroundImageUrl})`,
   };
   return (
-    <section className="movie-banner container" style={bannerStyle}>
-      <div className="banner-content">
+    <section className="movie-banner" style={bannerStyle}>
+      <div className="banner-content container">
         <h1>{title}</h1>
         <p>{description}</p>
         <p>

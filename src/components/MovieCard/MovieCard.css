@@ -1,3 +1,4 @@
 .movie-card img {
   max-width: 90%;
+  cursor: pointer;
 }
