@@ -1,3 +1,8 @@
+.category-select {
+  display: flex;
+  gap: 1rem;
+}
+
 .category-select select {
   width: 100%;
   background: var(--grey-darkest-color);

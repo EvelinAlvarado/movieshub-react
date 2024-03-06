@@ -12,5 +12,5 @@ export const Button = ({ title, isPrimaryButton }) => {
 
 Button.propTypes = {
   title: PropTypes.string.isRequired,
-  isPrimaryButton: PropTypes.string,
+  isPrimaryButton: PropTypes.bool,
 };
