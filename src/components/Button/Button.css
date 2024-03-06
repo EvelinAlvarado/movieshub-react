@@ -13,23 +13,34 @@
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-.play-now-button {
-  background-color: var(--primary-color);
+/* .play-now-button {
   font-size: var(--font-size-body-small);
+} */
+
+.primary-button {
+  background-color: var(--primary-color);
 }
 
-.play-now-button:hover {
+.primary-button:hover {
   background-color: #373cc5;
 }
 
-@media (min-width: 768px) {
+.secondary-button {
+  background-color: var(--black-lighter-color);
+}
+
+.secondary-button:hover {
+  background-color: #807e7e;
+}
+
+/* @media (min-width: 768px) {
   .play-now-button {
     font-size: var(--font-size-body-medium);
   }
-}
+} */
 
-@media (min-width: 1200px) {
+/* @media (min-width: 1200px) {
   .play-now-button {
     font-size: var(--font-size-body-big);
   }
-}
+} */

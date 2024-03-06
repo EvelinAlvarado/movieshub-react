@@ -65,7 +65,7 @@ export const SyncedSliders = () => {
             key={item.id}
             title={item.title}
             backgroundImageUrl={item.backgroundImageUrl}
-            description={item.description}
+            synopsis={item.synopsis}
             releaseYear={item.releaseYear}
             duration={item.duration}
           />

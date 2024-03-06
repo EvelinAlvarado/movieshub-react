@@ -14,6 +14,7 @@
   align-items: flex-start;
   max-width: 40%;
   z-index: 1;
+  padding-left: 1rem;
 }
 
 .banner-content h1 {
@@ -34,6 +35,7 @@
   .banner-content {
     padding-top: 30px;
     padding-bottom: 30px;
+    padding-left: 2rem;
   }
   .banner-content h1 {
     font-size: var(--font-size-title-medium);

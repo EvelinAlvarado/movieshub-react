@@ -1,3 +1,6 @@
+.movie-card {
+  padding-left: 1rem;
+}
 .movie-card img {
   max-width: 90%;
   cursor: pointer;

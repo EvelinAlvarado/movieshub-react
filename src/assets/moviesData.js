@@ -2,7 +2,7 @@ export const dataMovieList = [
   {
     id: 1,
     title: "The Shawshank Redemption",
-    description:
+    synopsis:
       "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
     releaseYear: "1994",
     duration: "2h 22min",
@@ -15,7 +15,7 @@ export const dataMovieList = [
   {
     id: 2,
     title: "The Godfather",
-    description:
+    synopsis:
       "An organized crime dynasty's aging patriarch transfers control of his clandestine empire to his reluctant son.",
     releaseYear: "1972",
     duration: "2h 55min",
@@ -28,7 +28,7 @@ export const dataMovieList = [
   {
     id: 3,
     title: "Schindler's List",
-    description:
+    synopsis:
       "In German-occupied Poland during World War II, industrialist Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazis.",
     releaseYear: "1993",
     duration: "3h 15min",
@@ -41,7 +41,7 @@ export const dataMovieList = [
   {
     id: 4,
     title: "The Dark Knight",
-    description:
+    synopsis:
       "When the menace known as The Joker emerges from his mysterious past, he wreaks havoc and chaos on the people of Gotham. The Dark Knight must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
     releaseYear: "2008",
     duration: "2h 32min",
@@ -54,7 +54,7 @@ export const dataMovieList = [
   {
     id: 5,
     title: "Forrest Gump",
-    description:
+    synopsis:
       "The presidencies of Kennedy and Johnson, the Vietnam War, the Watergate scandal, and other historical events unfold from the perspective of an Alabama man with an IQ of 75.",
     releaseYear: "1994",
     duration: "2h 22min",
@@ -67,7 +67,7 @@ export const dataMovieList = [
   {
     id: 6,
     title: "Pulp Fiction",
-    description:
+    synopsis:
       "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
     releaseYear: "1994",
     duration: "2h 34min",
@@ -80,7 +80,7 @@ export const dataMovieList = [
   {
     id: 7,
     title: "Fight Club",
-    description:
+    synopsis:
       "An insomniac office worker and a devil-may-care soap maker form an underground fight club that evolves into much more.",
     releaseYear: "1999",
     duration: "2h 19min",
@@ -93,7 +93,7 @@ export const dataMovieList = [
   {
     id: 8,
     title: "The Matrix",
-    description:
+    synopsis:
       "A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.",
     releaseYear: "1999",
     duration: "2h 16min",
@@ -106,7 +106,7 @@ export const dataMovieList = [
   {
     id: 9,
     title: "Inception",
-    description:
+    synopsis:
       "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
     releaseYear: "2010",
     duration: "2h 28min",
@@ -119,7 +119,7 @@ export const dataMovieList = [
   {
     id: 10,
     title: "The Silence of the Lambs",
-    description:
+    synopsis:
       "A young FBI cadet must receive the help of an incarcerated and manipulative cannibal killer to help catch another serial killer, a madman who skins his victims.",
     releaseYear: "1991",
     duration: "1h 58min",
@@ -132,7 +132,7 @@ export const dataMovieList = [
   {
     id: 11,
     title: "The Departed",
-    description:
+    synopsis:
       "An undercover cop and a mole in the police force attempt to identify each other while infiltrating an Irish gang in South Boston.",
     releaseYear: "2006",
     duration: "2h 31min",
@@ -145,7 +145,7 @@ export const dataMovieList = [
   {
     id: 12,
     title: "The Green Mile",
-    description:
+    synopsis:
       "The lives of guards on Death Row are affected by one of their charges: a black man accused of child murder and rape, yet who has a mysterious gift.",
     releaseYear: "1999",
     duration: "3h 9min",
@@ -158,7 +158,7 @@ export const dataMovieList = [
   {
     id: 13,
     title: "The Revenant",
-    description:
+    synopsis:
       "A frontiersman on a fur trading expedition in the 1820s fights for survival after being mauled by a bear and left for dead by members of his own hunting team.",
     releaseYear: "2015",
     duration: "2h 36min",

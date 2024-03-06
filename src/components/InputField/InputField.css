@@ -1,0 +1,13 @@
+.input-field {
+  display: block;
+  width: 100%;
+  background: var(--grey-darkest-color);
+  padding: 1rem 1rem;
+  border-radius: 7px;
+}
+
+.input-field::placeholder {
+  font-size: var(--font-size-body-small);
+  color: var(--grey-medium-color);
+  font-weight: lighter;
+}

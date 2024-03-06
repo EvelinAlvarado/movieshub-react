@@ -1,0 +1,41 @@
+.form-new-video h2 {
+  font-size: var(--font-size-title-small);
+  text-align: center;
+  margin: 2.5rem 0;
+}
+.form-new-video__inputs label {
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.movie-synopsis-textarea {
+  width: 100%;
+}
+
+.movie-synopsis-textarea {
+  background: var(--grey-darkest-color);
+  padding: 1rem 1rem;
+  border-radius: 7px;
+  font-family: var(--font-family);
+  font-size: var(--font-size-body-small);
+  color: var(--grey-medium-color);
+  font-weight: lighter;
+  resize: none;
+  min-height: 9rem;
+}
+
+.movie-synopsis-textarea::placeholder {
+  color: var(--grey-medium-color);
+  font-size: var(--font-size-body-small);
+  font-weight: lighter;
+}
+
+.form-new-video__buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+.form-new-video__buttons button {
+  width: 100%;
+}

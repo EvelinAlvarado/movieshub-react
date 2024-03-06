@@ -21,18 +21,30 @@ body {
   box-sizing: border-box;
   cursor: pointer;
   transition: border-color 0.25s;
+  font-size: var(--font-size-body-small);
 }
 
-@media (min-width: 800px) {
+input,
+textarea {
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
   .container {
     padding-right: 2.5rem;
     padding-left: 2.5rem;
   }
+  .play-now-button {
+    font-size: var(--font-size-body-medium);
+  }
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1200px) {
   .container {
     padding-left: calc((100vw - 1000px) / 2);
     padding-right: calc((100vw - 1000px) / 2);
+  }
+  .play-now-button {
+    font-size: var(--font-size-body-big);
   }
 }
