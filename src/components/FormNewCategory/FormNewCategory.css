@@ -1,0 +1,25 @@
+.color-picker {
+  background: var(--grey-darkest-color);
+  padding: 1rem 1rem;
+  border-radius: 7px;
+  font-size: var(--font-size-body-small);
+  color: var(--grey-medium-color);
+  font-weight: lighter;
+}
+
+.color-picker input {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0;
+  cursor: pointer;
+  background-color: transparent;
+  appearance: none;
+}
+
+.color-picker input::-webkit-color-swatch {
+  border-radius: 7px;
+}
+
+.color-picker input::-moz-color-swatch {
+  border-radius: 7px;
+}
