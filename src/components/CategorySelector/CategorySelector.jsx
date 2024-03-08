@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button } from "../Button/Button.jsx";
 import { IoIosAddCircle } from "react-icons/io";
 import PropTypes from "prop-types";
@@ -25,10 +26,13 @@ export const CategorySelector = () => {
           Thriller
         </option>
       </select>
-      <Button
-        title={<IoIosAddCircle style={iconStyles} />}
-        isPrimaryButton={false}
-      />
+      <Link to="/form-new-category">
+        <Button
+          toolTip="Add new category"
+          buttonText={<IoIosAddCircle style={iconStyles} />}
+          isPrimaryButton={false}
+        />
+      </Link>
     </label>
   );
 };

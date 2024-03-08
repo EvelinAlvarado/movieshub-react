@@ -31,8 +31,8 @@ export const FormNewMovie = () => {
         <InputField inputType="text" inputId="user" placeholderText="User" />
       </div>
       <div className="form-new-video__buttons">
-        <Button title="Save" isPrimaryButton={true} />
-        <Button title="Clear" isPrimaryButton={false} />
+        <Button buttonText="Save" isPrimaryButton={true} />
+        <Button buttonText="Clear" isPrimaryButton={false} />
       </div>
     </form>
   );

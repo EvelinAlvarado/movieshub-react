@@ -44,7 +44,7 @@ export const Banner = ({
             <i className="bi bi-clock-fill"></i>
             {duration}
           </p>
-          <Button title="Play Now" isPrimaryButton={true} />
+          <Button buttonText="Play Now" isPrimaryButton={true} />
         </div>
       </section>
     </div>

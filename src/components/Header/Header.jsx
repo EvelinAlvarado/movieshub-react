@@ -1,14 +1,17 @@
+import { Link } from "react-router-dom";
+import { Button } from "../Button/Button.jsx";
 import "./Header.css";
 import moviesflixlogo from "/img/moviesflix-logo.png";
-import { Button } from "../Button/Button.jsx";
 
 export const Header = () => {
   return (
     <header className="header container">
-      <a className="header__logo" href="#">
+      <Link to="/" className="header__logo" href="#">
         <img src={moviesflixlogo} alt="MoviesFlix Logo" />
-      </a>
-      <Button title="New Movie" />
+      </Link>
+      <Link to="/form-new-movie">
+        <Button buttonText="New Movie" />
+      </Link>
     </header>
   );
 };
