@@ -4,4 +4,11 @@
 .movie-card img {
   max-width: 90%;
   cursor: pointer;
+  box-shadow: var(--shadow);
+  border-radius: 7px;
+}
+
+.movie-card img:hover {
+  box-sizing: border-box;
+  border: 2px solid var(--primary-color);
 }

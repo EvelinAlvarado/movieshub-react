@@ -4,7 +4,7 @@ import { CategorySelector } from "../CategorySelector/CategorySelector.jsx";
 import { useState } from "react";
 import "./FormNewMovie.css";
 
-export const FormNewMovie = () => {
+export const FormNewMovie = ({ categories }) => {
   const [textareaValue, setTextareaValue] = useState("");
 
   const onTextareaChange = (event) => {
@@ -43,7 +43,7 @@ export const FormNewMovie = () => {
           inputId="posterUrl"
           placeholderText="Link for poster movie"
         />
-        <CategorySelector />
+        <CategorySelector categories={categories} />
         <label htmlFor="movie-synopsis" className="movie-synopsis">
           <textarea
             className="movie-synopsis-textarea"

@@ -2,12 +2,11 @@ import { useState, useEffect, useRef } from "react";
 import Slider from "react-slick";
 import { Banner } from "../Banner/Banner";
 import { MovieCard } from "../MovieCard/MovieCard";
-import { dataMovieList } from "/src/assets/moviesData.js";
 import "./SyncedSliders.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-export const SyncedSliders = () => {
+export const SyncedSliders = ({ moviesList, categories }) => {
   const [nav1, setNav1] = useState(null);
   const [nav2, setNav2] = useState(null);
   let sliderRef1 = useRef(null);
@@ -21,12 +20,18 @@ export const SyncedSliders = () => {
   const bannerSettings = {
     arrows: false,
     adaptiveHeight: true,
+    fade: true,
   };
   const categorySettings = {
     infinite: true,
     slidesToShow: 5,
     swipeToSlide: true,
     focusOnSelect: true,
+    afterChange: function (index) {
+      console.log(
+        `Slider Changed to: ${index + 1}, background: #222; color: #bada55`
+      );
+    },
     responsive: [
       {
         breakpoint: 1024,
@@ -54,40 +59,67 @@ export const SyncedSliders = () => {
 
   return (
     <section className="sliders-container">
-      <h4>Banner</h4>
       <Slider
         asNavFor={nav2}
         ref={(slider) => (sliderRef1 = slider)}
         {...bannerSettings}
       >
-        {dataMovieList.map((item) => (
+        {moviesList.map((movie) => (
           <Banner
-            key={item.id}
-            title={item.title}
-            backgroundImageUrl={item.backgroundImageUrl}
-            synopsis={item.synopsis}
-            releaseYear={item.releaseYear}
-            duration={item.duration}
+            key={movie.id}
+            title={movie.title}
+            backgroundImageUrl={movie.backgroundImageUrl}
+            synopsis={movie.synopsis}
+            releaseYear={movie.releaseYear}
+            duration={movie.duration}
           />
         ))}
-        {console.log(dataMovieList)}
       </Slider>
 
-      <h4>Category Slider</h4>
       <div className="slider-category container">
         <Slider
           asNavFor={nav1}
           ref={(slider) => (sliderRef2 = slider)}
           {...categorySettings}
         >
-          {dataMovieList.map((item) => (
+          {moviesList.map((movie) => (
             <MovieCard
-              key={item.id}
-              posterUrl={item.posterUrl}
-              title={item.title}
+              key={movie.id}
+              posterUrl={movie.posterUrl}
+              title={movie.title}
             />
           ))}
         </Slider>
+
+        {categories.map((category) => {
+          const moviesInCategory = moviesList.filter(
+            (movie) => movie.category === category.categoryName
+          );
+
+          if (moviesInCategory.length === 0) {
+            return null;
+          }
+
+          return (
+            <div key={category.id}>
+              <h3
+                className="title-category"
+                style={{ backgroundColor: category.colorPicker }}
+              >
+                {category.categoryName}
+              </h3>
+              <Slider {...categorySettings}>
+                {moviesInCategory.map((movie) => (
+                  <MovieCard
+                    key={movie.id}
+                    posterUrl={movie.posterUrl}
+                    title={movie.title}
+                  />
+                ))}
+              </Slider>
+            </div>
+          );
+        })}
       </div>
     </section>
   );
