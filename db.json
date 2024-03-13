@@ -2,19 +2,23 @@
   "categories": [
     {
       "id": "1",
-      "categoryName": "Drama"
+      "categoryName": "Drama",
+      "colorPicker": "#6bd1ff"
     },
     {
       "id": "2",
-      "categoryName": "Crime"
+      "categoryName": "Crime",
+      "colorPicker": "#9cd33b"
     },
     {
       "id": "3",
-      "categoryName": "Action"
+      "categoryName": "Action",
+      "colorPicker": "#00c86f"
     },
     {
       "id": "4",
-      "categoryName": "Thriller"
+      "categoryName": "Thriller",
+      "colorPicker": "#6b5be2"
     }
   ],
   "moviesData": [
