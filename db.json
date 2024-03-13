@@ -8,7 +8,7 @@
     {
       "id": "2",
       "categoryName": "Crime",
-      "colorPicker": "#9cd33b"
+      "colorPicker": "#ffba05"
     },
     {
       "id": "3",
@@ -19,6 +19,11 @@
       "id": "4",
       "categoryName": "Thriller",
       "colorPicker": "#6b5be2"
+    },
+    {
+      "id": "5",
+      "categoryName": "Horror",
+      "colorPicker": "#dc6ebe"
     }
   ],
   "moviesData": [
@@ -29,7 +34,7 @@
       "releaseYear": "1994",
       "duration": "2h 22min",
       "category": "Drama",
-      "posterUrl": "https://m.media-amazon.com/images/M/MV5BMzJkNjNiOWUtYzNmOC00MGFjLWE5N2EtMjdkYjEwMzQ4NzBhXkEyXkFqcGdeQXVyMTAyOTE2ODg0._V1_FMjpg_UX853_.jpg",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BNzUzNzI0MjAxMl5BMl5BanBnXkFtZTgwMjQ2MjEyMDE@._V1_FMjpg_UX350_.jpg",
       "backgroundImageUrl": "https://m.media-amazon.com/images/M/MV5BMTM0NjUxMDk5MF5BMl5BanBnXkFtZTcwNDMxNDY3Mw@@._V1_FMjpg_UX1800_.jpg"
     },
     {
@@ -151,6 +156,26 @@
       "category": "Adventure",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BY2FmODc2N2QtYmY3MS00YTMwLWI2NGYtZWRmYWVkNjFjZmI0XkEyXkFqcGdeQXVyNTMxMjgxMzA@._V1_FMjpg_UX465_.jpg",
       "backgroundImageUrl": "https://m.media-amazon.com/images/M/MV5BZWQ5NzBkZWYtMWMyYS00Nzg2LThhMTEtNTMxOTEwZjM2YTg1XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_FMjpg_UX1280_.jpg"
+    },
+    {
+      "id": "14",
+      "title": "Anatomy of a Fall",
+      "synopsis": "A woman is suspected of murder after her husband's death; their half-blind son faces a moral dilemma as the main witness.",
+      "releaseYear": "2023",
+      "duration": "2h 31min",
+      "category": "Thriller",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BMWU1NGVmOTAtZTQ2My00Mzg3LWIxNzEtYTQ5ZTU1OGRjM2UxXkEyXkFqcGdeQXVyMTY3ODkyNDkz._V1_FMjpg_UX355_.jpg",
+      "backgroundImageUrl": "https://m.media-amazon.com/images/M/MV5BZWRjNmRhZTEtNGIwNS00YTA5LTk0YzMtZmRhNmU2ODkwM2M2XkEyXkFqcGdeQXVyOTc5MDI5NjE@._V1_FMjpg_UX1280_.jpg"
+    },
+    {
+      "id": "15",
+      "title": "Parasite",
+      "synopsis": "Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.",
+      "releaseYear": "2019",
+      "duration": "2h 12min",
+      "category": "Thriller",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BZWU3MzYxMzMtYWQwYi00ZDAwLTkyNmEtMjJkYmQyNDQwYTdlXkEyXkFqcGdeQXVyMTA4NjE0NjEy._V1_FMjpg_UY3000_.jpg",
+      "backgroundImageUrl": "https://m.media-amazon.com/images/M/MV5BYzJlODFmOGYtMWQ0Ny00YjY5LWFmNDYtMDg4MzM2ZDBmODNmXkEyXkFqcGdeQXVyNzAwMTc4OTY@._V1_FMjpg_UX720_.jpg"
     }
   ]
 }
