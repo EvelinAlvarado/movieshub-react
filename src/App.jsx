@@ -2,9 +2,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Header } from "./components/Header/Header.jsx";
 import { Footer } from "./components/Footer/Footer.jsx";
 import { SyncedSliders } from "./components/SyncedSliders/SyncedSliders.jsx";
-import { FormNewMovie } from "./components/FormNewMovie/FormNewMovie.jsx";
+import { FormNewMovie } from "./components/Forms/FormNewMovie/FormNewMovie.jsx";
 import "./App.css";
-import { FormNewCategory } from "./components/FormNewCategory/FormNewCategory.jsx";
+import { FormNewCategory } from "./components/Forms/FormNewCategory/FormNewCategory.jsx";
 
 function App() {
   return (

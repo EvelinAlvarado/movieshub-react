@@ -1,5 +1,5 @@
 import { InputField } from "../InputField/InputField.jsx";
-import { Button } from "../Button/Button.jsx";
+import { Button } from "../../Button/Button.jsx";
 import "./FormNewCategory.css";
 
 export const FormNewCategory = () => {
