@@ -34,7 +34,7 @@
       "releaseYear": "1994",
       "duration": "2h 22min",
       "category": "Drama",
-      "posterUrl": "https://m.media-amazon.com/images/M/MV5BNzUzNzI0MjAxMl5BMl5BanBnXkFtZTgwMjQ2MjEyMDE@._V1_FMjpg_UX350_.jpg",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BMzBmNWM0YzktOTM2MC00MzVkLWFiNjUtNWVjMWRiOTQ0OWM0XkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_FMjpg_UY3000_.jpg",
       "backgroundImageUrl": "https://m.media-amazon.com/images/M/MV5BMTM0NjUxMDk5MF5BMl5BanBnXkFtZTcwNDMxNDY3Mw@@._V1_FMjpg_UX1800_.jpg"
     },
     {
@@ -176,6 +176,66 @@
       "category": "Thriller",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BZWU3MzYxMzMtYWQwYi00ZDAwLTkyNmEtMjJkYmQyNDQwYTdlXkEyXkFqcGdeQXVyMTA4NjE0NjEy._V1_FMjpg_UY3000_.jpg",
       "backgroundImageUrl": "https://m.media-amazon.com/images/M/MV5BYzJlODFmOGYtMWQ0Ny00YjY5LWFmNDYtMDg4MzM2ZDBmODNmXkEyXkFqcGdeQXVyNzAwMTc4OTY@._V1_FMjpg_UX720_.jpg"
+    },
+    {
+      "id": "16",
+      "title": "Interstellar",
+      "synopsis": "When Earth becomes uninhabitable in the future, a farmer and ex-NASA pilot, Joseph Cooper, is tasked to pilot a spacecraft, along with a team of researchers, to find a new planet for humans.",
+      "releaseYear": "2014",
+      "duration": "2h 49min",
+      "category": "Drama",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BZWNlZjhiNTAtYzM3OS00NTA3LWFhNzgtNzRhYjA1NTMzYTUwXkEyXkFqcGdeQXVyMTM0NTc2NDgw._V1_FMjpg_UX279_.jpg",
+      "backgroundImageUrl": "https://m.media-amazon.com/images/M/MV5BMjA3NTEwOTMxMV5BMl5BanBnXkFtZTgwMjMyODgxMzE@._V1_FMjpg_UX1280_.jpg"
+    },
+    {
+      "id": "17",
+      "title": "Taxi Driver",
+      "synopsis": "A mentally unstable veteran works as a nighttime taxi driver in New York City, where the perceived decadence and sleaze fuels his urge for violent action.",
+      "releaseYear": "1976",
+      "duration": "1h 54min",
+      "category": "Crime",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BM2M1MmVhNDgtNmI0YS00ZDNmLTkyNjctNTJiYTQ2N2NmYzc2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UY2871_.jpg",
+      "backgroundImageUrl": "https://m.media-amazon.com/images/M/MV5BMzQwNDM1NDY4MF5BMl5BanBnXkFtZTgwNjIwNzIwMjE@._V1_FMjpg_UX1280_.jpg"
+    },
+    {
+      "id": "18",
+      "title": "The Lord of the Rings: The Fellowship of the Ring",
+      "synopsis": "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.",
+      "releaseYear": "2001",
+      "duration": "2h 58min",
+      "category": "Action",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_FMjpg_UY2936_.jpg",
+      "backgroundImageUrl": "https://m.media-amazon.com/images/M/MV5BMjIwOTc4MDAzN15BMl5BanBnXkFtZTcwOTkwMjk2Mw@@._V1_FMjpg_UX1280_.jpg"
+    },
+    {
+      "id": "19",
+      "title": "Avengers: Infinity War",
+      "synopsis": "The Avengers and their allies must be willing to sacrifice all in an attempt to defeat the powerful Thanos before his blitz of devastation and ruin puts an end to the universe.",
+      "releaseYear": "2018",
+      "duration": "2h 29min",
+      "category": "Action",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_FMjpg_UY2048_.jpg",
+      "backgroundImageUrl": "https://m.media-amazon.com/images/M/MV5BMjA0MTg0MjUwMF5BMl5BanBnXkFtZTgwMjc4MjkzNTM@._V1_FMjpg_UX1280_.jpg"
+    },
+    {
+      "id": "20",
+      "title": "Se7en",
+      "synopsis": "Two detectives, a rookie and a veteran, hunt a serial killer who uses the seven deadly sins as his motives.",
+      "releaseYear": "1995",
+      "duration": "2h 7min",
+      "category": "Thriller",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BOTUwODM5MTctZjczMi00OTk4LTg3NWUtNmVhMTAzNTNjYjcyXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_FMjpg_UY2815_.jpg",
+      "backgroundImageUrl": "https://m.media-amazon.com/images/M/MV5BMTYzNDc3NzYzOF5BMl5BanBnXkFtZTcwNjQzNTIwNA@@._V1_FMjpg_UX1280_.jpg"
+    },
+    {
+      "id": "21",
+      "title": "Memento",
+      "synopsis": "A man with short-term memory loss attempts to track down his wife's murderer.",
+      "releaseYear": "2000",
+      "duration": "1h 53min",
+      "category": "Thriller",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BZTcyNjk1MjgtOWI3Mi00YzQwLWI5MTktMzY4ZmI2NDAyNzYzXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_FMjpg_UX1022_.jpg",
+      "backgroundImageUrl": "https://m.media-amazon.com/images/M/MV5BZmE2NTgxYTYtNTY1Yi00Yzg1LWI5NjctYTY1MjEwNTg0MzEzXkEyXkFqcGdeQXVyMTI3MDk3MzQ@._V1_FMjpg_UX1280_.jpg"
     }
   ]
 }
