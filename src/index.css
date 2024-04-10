@@ -1,28 +1,28 @@
-@import url(./assets/base-styles/_reset.css);
-@import url(./assets/base-styles/_variables.css);
+/* @import url(./assets/base-styles/_reset.css); */
+/* @import url(./assets/base-styles/_variables.css); */
 
-body {
+/* body {
   background-color: var(--background-color);
   color: var(--grey-light-color);
   font-family: var(--font-family);
   overflow-x: hidden;
   margin: 0;
-}
+} */
 
 .container {
   padding-right: 1rem;
   padding-left: 1rem;
 }
 
-.button {
+/* .button {
   border-radius: 7px;
   cursor: pointer;
   padding: 0.75rem 1.5rem;
-  box-sizing: border-box;
+  border: none;
   cursor: pointer;
   transition: border-color 0.25s;
   font-size: var(--font-size-body-small);
-}
+} */
 
 input,
 textarea {

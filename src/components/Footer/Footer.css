@@ -12,6 +12,10 @@
   width: 9rem;
 }
 
+.footer-logo img {
+  width: 100%;
+}
+
 .socialMedia {
   display: flex;
   gap: 1rem;
