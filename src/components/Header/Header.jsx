@@ -1,17 +1,36 @@
 import { Link } from "react-router-dom";
+import styled from "styled-components";
 import { Button } from "../Button/Button.jsx";
 import "./Header.css";
 import moviesflixlogo from "/img/moviesflix-logo.png";
+import { Container } from "../UI/index.js";
+
+const HeaderStyle = styled(Container)`
+  background-color: var(--black-dark-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.125rem;
+  padding-bottom: 1.125rem;
+  border-bottom: 3px solid var(--primary-color);
+`;
+
+const LogoLink = styled(Link)`
+  width: 9rem;
+  img {
+    width: 100%;
+  }
+`;
 
 export const Header = () => {
   return (
-    <header className="header container">
-      <Link to="/" className="header__logo" href="#">
+    <HeaderStyle as="header">
+      <LogoLink to="/" className="header__logo" href="#">
         <img src={moviesflixlogo} alt="MoviesFlix Logo" />
-      </Link>
+      </LogoLink>
       <Link to="/form-new-movie">
         <Button buttonText="New Movie" />
       </Link>
-    </header>
+    </HeaderStyle>
   );
 };
