@@ -1,8 +1,20 @@
-import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
+import styled from "styled-components";
 import { Button } from "../Button/Button.jsx";
-import "./Banner.css";
+import { MovieBanner, BannerContent } from "./BannerStyles.js";
 
+const ContainerStyle = styled.div`
+  padding-right: 0;
+  padding-left: 0;
+  @media (min-width: 768px) {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  @media (min-width: 1200px) {
+    padding-left: calc((100vw - 1000px) / 2);
+    padding-right: calc((100vw - 1000px) / 2);
+  }
+`;
 export const Banner = ({
   backgroundImageUrl,
   title,
@@ -14,26 +26,10 @@ export const Banner = ({
     backgroundImage: `linear-gradient(90deg, rgba(25, 25, 25, 1) 0%, rgba(25, 25, 25, 0.5) 50%), url(${backgroundImageUrl})`,
   };
 
-  const [isWideScreen, setIsWideScreen] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsWideScreen(window.innerWidth >= 1200);
-    };
-
-    handleResize();
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
   return (
-    <div className={`${isWideScreen ? "container" : ""}`}>
-      <section className="movie-banner" style={bannerStyle}>
-        <div className="banner-content">
+    <ContainerStyle>
+      <MovieBanner style={bannerStyle}>
+        <BannerContent>
           <h1>{title}</h1>
           <p>{synopsis}</p>
           <p>
@@ -45,9 +41,9 @@ export const Banner = ({
             {duration}
           </p>
           <Button buttonText="Play Now" isPrimaryButton={true} />
-        </div>
-      </section>
-    </div>
+        </BannerContent>
+      </MovieBanner>
+    </ContainerStyle>
   );
 };
 

@@ -1,4 +1,4 @@
-.movie-banner {
+/* .movie-banner {
   width: 100%;
   position: relative;
   min-height: 50vh;
@@ -7,28 +7,28 @@
   display: flex;
   align-items: center;
 }
-
-.banner-content {
+ */
+/* .banner-content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   max-width: 40%;
   z-index: 1;
   padding-left: 1rem;
-}
+} */
 
-.banner-content h1 {
+/* .banner-content h1 {
   font-size: var(--font-size-body-big);
   margin-bottom: 10px;
-}
+} */
 
 /* Hide paragraphs on smaller screens */
-.banner-content p {
+/* .banner-content p {
   display: none;
-}
+} */
 
 /* Styles for medium and large screens */
-@media (min-width: 767px) {
+/* @media (min-width: 767px) {
   .movie-banner {
     background-position: center;
   }
@@ -48,9 +48,9 @@
     gap: 6px;
     margin-bottom: 5px;
   }
-}
+} */
 
-@media (min-width: 1200px) {
+/* @media (min-width: 1200px) {
   .movie-banner {
     background-position: center;
     background-size: cover;
@@ -74,3 +74,4 @@
     margin-bottom: 10px;
   }
 }
+ */
