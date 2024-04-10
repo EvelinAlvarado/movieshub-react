@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import "./Footer.css";
 import moviesflixlogo from "/img/moviesflix-logo.png";
 
 const FooterStyle = styled.footer`
