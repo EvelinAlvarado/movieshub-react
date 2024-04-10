@@ -1,21 +1,61 @@
+import styled from "styled-components";
 import "./Footer.css";
 import moviesflixlogo from "/img/moviesflix-logo.png";
 
+const FooterStyle = styled.footer`
+  background-color: var(--black-dark-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1.125rem;
+  padding-bottom: 1.125rem;
+  border-top: 3px solid var(--primary-color);
+`;
+
+const FooterLogo = styled.a`
+  width: 9rem;
+  img {
+    width: 100%;
+  }
+`;
+
+const SocialMedia = styled.div`
+  display: flex;
+  gap: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 0.75rem;
+
+  a .bi {
+    font-size: var(--font-size-body-big);
+    color: var(--grey-light-color);
+    transition: color 0.5s;
+  }
+
+  a .bi:hover {
+    color: var(--primary-color);
+  }
+`;
+
+const Strong = styled.strong`
+  font-size: var(--font-size-body-smaller);
+  color: var(--grey-light-color);
+`;
+
 export const Footer = () => {
   return (
-    <footer className="footer container">
-      <a className="footer-logo" href="#">
+    <FooterStyle className="container">
+      <FooterLogo href="#">
         <img src={moviesflixlogo} alt="MoviesFlix Logo" />
-      </a>
-      <div className="socialMedia">
+      </FooterLogo>
+      <SocialMedia>
         <a href="#">
           <i className="bi bi-github"></i>
         </a>
         <a href="#">
           <i className="bi bi-linkedin"></i>
         </a>
-      </div>
-      <strong>Evelin Alvarado</strong>
-    </footer>
+      </SocialMedia>
+      <Strong>Evelin Alvarado</Strong>
+    </FooterStyle>
   );
 };
