@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Button } from "../Button/Button.jsx";
-import "./Header.css";
 import moviesflixlogo from "/img/moviesflix-logo.png";
 import { Container } from "../UI/index.js";
 
