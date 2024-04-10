@@ -3,10 +3,11 @@ import { Header } from "./components/Header/Header.jsx";
 import { Footer } from "./components/Footer/Footer.jsx";
 import { SyncedSliders } from "./components/SyncedSliders/SyncedSliders.jsx";
 import { FormNewMovie } from "./components/Forms/FormNewMovie/FormNewMovie.jsx";
-import "./App.css";
 import { FormNewCategory } from "./components/Forms/FormNewCategory/FormNewCategory.jsx";
 import { useState, useEffect } from "react";
 import { clientServices } from "./service/client-service";
+/* Styles */
+import { GlobalStyle } from "./GlobalStyle.js";
 
 function App() {
   const [moviesList, setMoviesList] = useState([]);
@@ -50,6 +51,7 @@ function App() {
 
   return (
     <>
+      <GlobalStyle />
       <BrowserRouter>
         <Header />
         <main>
