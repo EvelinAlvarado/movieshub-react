@@ -1,4 +1,4 @@
-.new-video {
+/* .new-video {
   background-color: transparent;
   color: var(--secondary-color);
   font-size: var(--font-size-body-medium);
@@ -11,13 +11,13 @@
 .new-video:focus,
 .new-video:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
+} */
 
 /* .play-now-button {
   font-size: var(--font-size-body-small);
 } */
 
-.primary-button {
+/* .primary-button {
   background-color: var(--primary-color);
 }
 
@@ -31,7 +31,7 @@
 
 .secondary-button:hover {
   background-color: #807e7e;
-}
+} */
 
 /* @media (min-width: 768px) {
   .play-now-button {

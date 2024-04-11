@@ -10,16 +10,31 @@ const Btn = styled.button`
   cursor: pointer;
   transition: border-color 0.25s;
   font-size: var(--font-size-body-small);
+
+  &.primary-button {
+    background-color: var(--primary-color);
+  }
+
+  &.primary-button:hover {
+    background-color: #373cc5;
+  }
+
+  &.secondary-button {
+    background-color: var(--black-lighter-color);
+  }
+
+  &.secondary-button:hover {
+    background-color: #807e7e;
+  }
 `;
 
 export const Button = ({ toolTip, buttonText, isPrimaryButton, icon }) => {
   const buttonClassName = isPrimaryButton
     ? "primary-button"
     : "secondary-button";
-  const combinedClassName = `button ${buttonClassName || ""}`;
 
   return (
-    <Btn title={toolTip} className={combinedClassName}>
+    <Btn title={toolTip} className={buttonClassName}>
       {icon && icon}
       {buttonText}
     </Btn>
