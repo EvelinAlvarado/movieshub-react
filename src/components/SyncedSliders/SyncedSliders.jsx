@@ -1,10 +1,44 @@
 import { useState, useEffect, useRef } from "react";
+import PropTypes from "prop-types";
 import Slider from "react-slick";
+import styled from "styled-components";
 import { Banner } from "../Banner/Banner";
 import { MovieCard } from "../MovieCard/MovieCard";
-import "./SyncedSliders.css";
+import { Container } from "../UI";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
+const SlidersContainer = styled(Container)`
+  width: 100%;
+  margin-bottom: 2rem;
+`;
+
+const SliderCategory = styled.div`
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 1rem;
+`;
+
+const TitleCategory = styled.h3`
+  margin: 1rem 0 0.5rem 1rem;
+  font-size: var(--font-size-body-small);
+  font-weight: var(--font-weight-light);
+  background-color: var(--category-color1);
+  color: var(--grey-light-color);
+  border-radius: 7px;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+
+  @media (min-width: 767px) {
+    font-size: var(--font-size-body-medium);
+    font-weight: var(--font-style-normal);
+    margin-top: 2rem;
+  }
+
+  @media (min-width: 1200px) {
+    font-size: var(--font-size-body-big);
+  }
+`;
 
 export const SyncedSliders = ({ moviesList, categories }) => {
   const [nav1, setNav1] = useState(null);
@@ -58,7 +92,7 @@ export const SyncedSliders = ({ moviesList, categories }) => {
   };
 
   return (
-    <section className="sliders-container">
+    <SlidersContainer as="section" /* className="sliders-container" */>
       <Slider
         asNavFor={nav2}
         ref={(slider) => (sliderRef1 = slider)}
@@ -76,7 +110,7 @@ export const SyncedSliders = ({ moviesList, categories }) => {
         ))}
       </Slider>
 
-      <div className="slider-category container">
+      <SliderCategory>
         <Slider
           asNavFor={nav1}
           ref={(slider) => (sliderRef2 = slider)}
@@ -102,12 +136,9 @@ export const SyncedSliders = ({ moviesList, categories }) => {
 
           return (
             <div key={category.id}>
-              <h3
-                className="title-category"
-                style={{ backgroundColor: category.colorPicker }}
-              >
+              <TitleCategory style={{ backgroundColor: category.colorPicker }}>
                 {category.categoryName}
-              </h3>
+              </TitleCategory>
               <Slider {...categorySettings}>
                 {moviesInCategory.map((movie) => (
                   <MovieCard
@@ -120,7 +151,12 @@ export const SyncedSliders = ({ moviesList, categories }) => {
             </div>
           );
         })}
-      </div>
-    </section>
+      </SliderCategory>
+    </SlidersContainer>
   );
+};
+
+SyncedSliders.propTypes = {
+  moviesList: PropTypes.array,
+  categories: PropTypes.array,
 };
