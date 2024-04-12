@@ -4,6 +4,7 @@
   background: var(--grey-darkest-color);
   padding: 1rem 1rem;
   border-radius: 7px;
+  color: aqua;
 }
 
 .input-field::placeholder {
