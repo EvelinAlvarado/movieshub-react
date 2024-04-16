@@ -3,7 +3,7 @@ import { createGlobalStyle } from "styled-components";
 export const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
+    font-family: var(--font-family);
     margin: 0;
     padding: 0;
     text-decoration: none;
@@ -36,6 +36,7 @@ export const GlobalStyle = createGlobalStyle`
   --font-size-body-smaller: 0.75rem;
 
   --primary-color: #2a7ae4;
+  --primary-color-hover: #373cc5;
   --secondary-color: #ffffff;
   --background-color: #191919;
 
@@ -75,4 +76,5 @@ body {
   overflow-x: hidden;
   margin: 0;
 }
+
 `;

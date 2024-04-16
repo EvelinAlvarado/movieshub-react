@@ -18,7 +18,7 @@ export const customTheme = (outerTheme) =>
             "& label.Mui-focused": {
               color: "var(--TextField-brandBorderFocusedColor)",
             },
-            backgroundColor: "var(--grey-darkest-color)",
+            /* backgroundColor: "var(--grey-darkest-color)", */
             borderRadius: "7px 7px 0 0",
           },
         },
@@ -56,7 +56,7 @@ export const customTheme = (outerTheme) =>
       MuiSelect: {
         styleOverrides: {
           root: {
-            backgroundColor: "var(--grey-darkest-color)",
+            /* backgroundColor: "var(--grey-darkest-color)", */
             borderRadius: "7px 7px 0 0",
             "&::before, &::after": {
               borderBottom: "2px solid var(--grey-dark-color)",
@@ -64,9 +64,9 @@ export const customTheme = (outerTheme) =>
             "&:hover:not(.Mui-disabled, .Mui-error):before": {
               borderBottom: "2px solid var(--secondary-color)",
             },
-            "&:hover:not(.Mui-disabled)": {
+            /* "&:hover:not(.Mui-disabled)": {
               backgroundColor: "var(--grey-darkest-color)",
-            },
+            }, */
             "&.Mui-focused": {
               backgroundColor: "var(--grey-darkest-color)",
             },
