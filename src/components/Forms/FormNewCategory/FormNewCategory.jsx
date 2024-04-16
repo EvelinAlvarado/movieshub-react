@@ -1,48 +1,75 @@
-import { InputField } from "../InputField/InputField.jsx";
+import PropTypes from "prop-types";
+import { useForm } from "react-hook-form";
+import { Container } from "../../UI/index.js";
+import { TextField } from "@mui/material";
+import { ThemeProvider, useTheme } from "@mui/material/styles";
+import { customTheme } from "../InputsStyles.js";
+import {
+  TitleForm,
+  DivButtons,
+  DivInputs,
+} from "../FormNewMovie/FormNewMovieStyle.js";
+import { CategoriesTable } from "../CategoriesTable/CategoriesTable.jsx";
 import { Button } from "../../Button/Button.jsx";
 import "./FormNewCategory.css";
-import { useState, useEffect } from "react";
 
-export const FormNewCategory = () => {
-  /* useEffect(() => {
-    const rootStyles = getComputedStyle(document.documentElement);
-    const initialColor = rootStyles
-      .getPropertyValue("--category-color1")
-      .trim();
-    setColorPicker(initialColor);
-  }, []); */
+export const FormNewCategory = ({ categories }) => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
-  const [colorPicker, setColorPicker] = useState("");
+  const outerTheme = useTheme();
 
-  const onColoPickerChange = (event) => {
-    console.log(event.target.value);
-    setColorPicker(event.target.value);
-  };
+  // Function to handle form submission
+  const handleSubmitForm = handleSubmit((data) => {
+    console.log(data);
+  });
   return (
-    <form className="form-new-video container">
-      <h2>New Category</h2>
-      <div className="form-new-video__inputs">
-        <InputField
-          inputType="text"
-          inputId="title"
-          placeholderText="Category"
-        />
-        <label htmlFor="color-picker" className="color-picker">
-          Select your favorite color:
-          <input
-            type="color"
-            name="color-picker"
-            id="color-picker"
-            value={colorPicker}
-            onChange={onColoPickerChange}
-          />
-        </label>
-        <InputField inputType="text" inputId="user" placeholderText="User" />
-      </div>
-      <div className="form-new-video__buttons">
-        <Button buttonText="Save" isPrimaryButton={true} />
-        <Button buttonText="Clear" isPrimaryButton={false} />
-      </div>
-    </form>
+    <>
+      <Container as="form" onSubmit={handleSubmitForm}>
+        <TitleForm>New Category</TitleForm>
+        <DivInputs>
+          <ThemeProvider theme={customTheme(outerTheme)}>
+            <TextField
+              label="Category"
+              variant="filled"
+              type="text"
+              {...register("categoryName", { required: true })}
+              error={Boolean(errors.categoryName)}
+              helperText={
+                errors.categoryName &&
+                errors.categoryName.type === "required" &&
+                "This field is required"
+              }
+            />
+            <TextField
+              label="Select a color"
+              variant="filled"
+              type="color"
+              defaultValue="#c2c2c2"
+              {...register("colorPicker", {
+                validate: (value) =>
+                  value !== "#c2c2c2" || "Please select a color",
+              })}
+              error={Boolean(errors.colorPicker)}
+              helperText={errors.colorPicker && errors.colorPicker.message}
+            />
+          </ThemeProvider>
+        </DivInputs>
+        <DivButtons>
+          <Button buttonText="Save" isPrimaryButton={true} />
+          <Button buttonText="Clear" isPrimaryButton={false} />
+        </DivButtons>
+      </Container>
+      <Container>
+        <CategoriesTable categories={categories} />
+      </Container>
+    </>
   );
+};
+
+FormNewCategory.propTypes = {
+  categories: PropTypes.array,
 };
