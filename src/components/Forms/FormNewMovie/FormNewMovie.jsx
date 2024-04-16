@@ -1,5 +1,6 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
+import { useForm, Controller } from "react-hook-form";
 import { Link } from "react-router-dom";
 import { TextField } from "@mui/material";
 import { ThemeProvider, useTheme } from "@mui/material/styles";
@@ -8,6 +9,7 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
+import FormHelperText from "@mui/material/FormHelperText";
 import Fab from "@mui/material/Fab";
 import AddIcon from "@mui/icons-material/Add";
 import { Button } from "../../Button/Button.jsx";
@@ -20,68 +22,111 @@ import {
 } from "./FormNewMovieStyle.js";
 
 export const FormNewMovie = ({ categories }) => {
-  const [textareaValue, setTextareaValue] = useState("");
-  const [optionValue, setOptionValue] = useState("");
+  const [movieData, setMovieData] = useState({
+    title: "",
+    synopsis: "",
+    releaseYear: "",
+    posterUrl: "",
+    backgroundImageUrl: "",
+  });
 
-  const onTextareaChange = (event) => {
-    const newTextareaValue = event.target.value;
-    setTextareaValue(newTextareaValue);
-    console.log(newTextareaValue);
-  };
+  const {
+    register,
+    handleSubmit,
+    control,
+    formState: { errors },
+  } = useForm();
 
-  const onSubmit = (event) => {
-    event.preventDefault();
-    console.log(event);
-  };
-
-  /* const onEnterPress = (event) => {
-    if (event.key === "Enter") {
-      event.preventDefault();
-    }
-  }; */
-
-  // Function to handle category change
-  const handleChangeCategoryValue = (event) => {
-    // console.log(event);
-    setOptionValue(event.target.value);
-    // console.log(event.target.value);
-  };
+  // Function to handle form submission
+  const handleSubmitForm = handleSubmit((data) => {
+    console.log(data);
+  });
 
   const outerTheme = useTheme();
 
   return (
-    <Container as="form" onSubmit={onSubmit}>
+    <Container as="form" onSubmit={handleSubmitForm}>
       <TitleForm>New Film</TitleForm>
       <DivInputs>
         <ThemeProvider theme={customTheme(outerTheme)}>
-          <TextField label="Title" variant="filled" type="text" />
+          <TextField
+            label="Title"
+            variant="filled"
+            type="text"
+            {...register("title", { required: true })}
+            error={Boolean(errors.title)}
+            helperText={
+              errors.title &&
+              errors.title.type === "required" &&
+              "This field is required"
+            }
+          />
+          <TextField
+            label="Year"
+            variant="filled"
+            type="text"
+            {...register("releaseYear")}
+          />
+          <TextField
+            label="Duration"
+            variant="filled"
+            type="text"
+            {...register("duration")}
+          />
           <TextField
             label="Link for background movie"
             variant="filled"
             type="text"
+            {...register("backgroundImageUrl", { required: true })}
+            error={Boolean(errors.backgroundImageUrl)}
+            helperText={
+              errors.backgroundImageUrl &&
+              errors.backgroundImageUrl.type === "required" &&
+              "This field is required"
+            }
           />
           <TextField
             label="Link for poster movie"
             variant="filled"
             type="text"
+            {...register("posterUrl", { required: true })}
+            error={Boolean(errors.posterUrl)}
+            helperText={
+              errors.posterUrl &&
+              errors.posterUrl.type === "required" &&
+              "This field is required"
+            }
           />
           <SelectDiv>
-            <FormControl fullWidth variant="filled">
+            <FormControl
+              fullWidth
+              variant="filled"
+              error={Boolean(errors.category)}
+            >
               <InputLabel>Choose a category:</InputLabel>
-              <Select
-                id="demo-simple-select"
-                value={optionValue}
-                /* label="Choose a category:" */
-                onChange={handleChangeCategoryValue}
-              >
-                {categories.map((category) => {
-                  return (
-                    <MenuItem key={category.id} value={category.categoryName}>
-                      {category.categoryName}
-                    </MenuItem>
-                  );
-                })}
-              </Select>
+              <Controller
+                name="category"
+                control={control}
+                rules={{ required: true }}
+                defaultValue="" // Assign a default value
+                render={({ field }) => (
+                  <Select {...field}>
+                    {categories.map((category) => {
+                      return (
+                        <MenuItem
+                          key={category.id}
+                          value={category.categoryName}
+                        >
+                          {category.categoryName}
+                        </MenuItem>
+                      );
+                    })}
+                  </Select>
+                )}
+              />
+              {errors.category && (
+                <FormHelperText>Must select a category</FormHelperText>
+              )}
             </FormControl>
             <Link to="/form-new-category">
               <Fab color="primary" aria-label="add" title="Add new category">
@@ -94,8 +139,7 @@ export const FormNewMovie = ({ categories }) => {
             multiline
             minRows={3}
             variant="filled"
-            value={textareaValue}
-            onChange={onTextareaChange}
+            {...register("synopsis")}
           />
         </ThemeProvider>
       </DivInputs>
