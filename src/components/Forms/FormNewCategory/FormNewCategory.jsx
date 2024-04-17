@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { v4 as uuidv4 } from "uuid";
 import { useForm } from "react-hook-form";
 import { Container } from "../../UI/index.js";
 import { TextField } from "@mui/material";
@@ -24,7 +25,8 @@ export const FormNewCategory = ({ categories }) => {
 
   // Function to handle form submission
   const handleSubmitForm = handleSubmit((data) => {
-    console.log(data);
+    const categoryData = { ...data, id: uuidv4() };
+    console.log(categoryData);
   });
   return (
     <>

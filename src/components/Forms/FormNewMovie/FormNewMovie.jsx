@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 import PropTypes from "prop-types";
 import { useForm, Controller } from "react-hook-form";
 import { Link } from "react-router-dom";
@@ -22,13 +22,13 @@ import {
 } from "./FormNewMovieStyle.js";
 
 export const FormNewMovie = ({ categories }) => {
-  const [movieData, setMovieData] = useState({
+  /* const [movieData, setMovieData] = useState({
     title: "",
     synopsis: "",
     releaseYear: "",
     posterUrl: "",
     backgroundImageUrl: "",
-  });
+  }); */
 
   const {
     register,
@@ -39,7 +39,8 @@ export const FormNewMovie = ({ categories }) => {
 
   // Function to handle form submission
   const handleSubmitForm = handleSubmit((data) => {
-    console.log(data);
+    const movieData = { ...data, id: uuidv4() };
+    console.log(movieData);
   });
 
   const outerTheme = useTheme();
