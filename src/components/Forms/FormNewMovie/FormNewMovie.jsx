@@ -20,6 +20,7 @@ import {
   DivButtons,
   SelectDiv,
 } from "./FormNewMovieStyle.js";
+import { clientServices } from "../../../service/client-service.js";
 
 export const FormNewMovie = ({ categories }) => {
   /* const [movieData, setMovieData] = useState({
@@ -38,8 +39,14 @@ export const FormNewMovie = ({ categories }) => {
   } = useForm();
 
   // Function to handle form submission
-  const handleSubmitForm = handleSubmit((data) => {
+  const handleSubmitForm = handleSubmit(async (data) => {
     const movieData = { ...data, id: uuidv4() };
+    try {
+      const response = await clientServices.registerNewMovie(movieData);
+      console.log(response);
+    } catch (error) {
+      console.error(error);
+    }
     console.log(movieData);
   });
 
