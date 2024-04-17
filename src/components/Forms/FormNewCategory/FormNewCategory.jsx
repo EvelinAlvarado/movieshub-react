@@ -12,6 +12,7 @@ import {
 } from "../FormNewMovie/FormNewMovieStyle.js";
 import { CategoriesTable } from "../CategoriesTable/CategoriesTable.jsx";
 import { Button } from "../../Button/Button.jsx";
+import { clientServices } from "../../../service/client-service.js";
 import "./FormNewCategory.css";
 
 export const FormNewCategory = ({ categories }) => {
@@ -24,8 +25,14 @@ export const FormNewCategory = ({ categories }) => {
   const outerTheme = useTheme();
 
   // Function to handle form submission
-  const handleSubmitForm = handleSubmit((data) => {
+  const handleSubmitForm = handleSubmit(async (data) => {
     const categoryData = { ...data, id: uuidv4() };
+    try {
+      const response = await clientServices.registerNewCategory(categoryData);
+      console.log(response);
+    } catch (error) {
+      console.error(error);
+    }
     console.log(categoryData);
   });
   return (

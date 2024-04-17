@@ -42,9 +42,30 @@ const registerNewMovie = async (movieData) => {
   }
 };
 
+//Function to register a new category on server using async/await
+const registerNewCategory = async (categoryData) => {
+  try {
+    const response = await fetch(
+      "https://json-server-vercel-moviesflix-react.vercel.app/categories",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(categoryData),
+      }
+    );
+    const responseData = await response.json();
+    return responseData;
+  } catch (error) {
+    throw new Error("Error registering new category: ", error.message);
+  }
+};
+
 // Exported object containing client-related services
 export const clientServices = {
   moviesList,
   categoriesList,
   registerNewMovie,
+  registerNewCategory,
 };
