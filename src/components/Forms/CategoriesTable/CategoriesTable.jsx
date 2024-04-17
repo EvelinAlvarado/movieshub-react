@@ -9,7 +9,7 @@ import TableRow from "@mui/material/TableRow";
 import IconButton from "@mui/material/IconButton";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
-import PaletteIcon from "@mui/icons-material/Palette";
+import MovieIcon from "@mui/icons-material/Movie";
 import Paper from "@mui/material/Paper";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
@@ -55,7 +55,7 @@ export const CategoriesTable = ({ categories }) => {
             <StyledTableRow key={category.id}>
               <StyledTableCell>{category.categoryName}</StyledTableCell>
               <StyledTableCell align="center">
-                <PaletteIcon style={{ color: `${category.colorPicker}` }} />
+                <MovieIcon style={{ color: `${category.colorPicker}` }} />
               </StyledTableCell>
               <StyledTableCell align="center">
                 <IconButton>

@@ -6,14 +6,6 @@ import { MovieBanner, BannerContent } from "./BannerStyles.js";
 const ContainerStyle = styled.div`
   padding-right: 0;
   padding-left: 0;
-  @media (min-width: 768px) {
-    padding-right: 0;
-    padding-left: 0;
-  }
-  @media (min-width: 1200px) {
-    padding-left: calc((100vw - 1000px) / 2);
-    padding-right: calc((100vw - 1000px) / 2);
-  }
 `;
 export const Banner = ({
   backgroundImageUrl,

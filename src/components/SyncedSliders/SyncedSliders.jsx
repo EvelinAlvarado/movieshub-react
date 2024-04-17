@@ -36,7 +36,7 @@ const TitleCategory = styled.h3`
   }
 
   @media (min-width: 1200px) {
-    font-size: var(--font-size-body-big);
+    font-size: var(--font-size-body-medium);
   }
 `;
 

@@ -69,7 +69,10 @@ function App() {
               path="/form-new-movie"
               element={<FormNewMovie categories={categories} />}
             />
-            <Route path="/form-new-category" element={<FormNewCategory />} />
+            <Route
+              path="/form-new-category"
+              element={<FormNewCategory categories={categories} />}
+            />
             {/* Add Page404 */}
           </Routes>
         </main>

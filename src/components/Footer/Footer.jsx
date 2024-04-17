@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import { Container } from "../UI";
 import moviesflixlogo from "/img/moviesflix-logo.png";
 
-const FooterStyle = styled.footer`
+const FooterStyle = styled(Container)`
   background-color: var(--black-dark-color);
   display: flex;
   flex-direction: column;
@@ -42,7 +43,7 @@ const Strong = styled.strong`
 
 export const Footer = () => {
   return (
-    <FooterStyle className="container">
+    <FooterStyle as="footer">
       <FooterLogo href="#">
         <img src={moviesflixlogo} alt="MoviesFlix Logo" />
       </FooterLogo>
