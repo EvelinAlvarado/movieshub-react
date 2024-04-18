@@ -31,23 +31,26 @@ function App() {
     fetchMoviesList();
   }, []);
 
-  // Effect to fetch categories list from the server
-  useEffect(() => {
-    const fetchCategoriesList = async () => {
-      try {
-        const fetchedCategories = await clientServices.categoriesList();
-        if (!fetchedCategories || fetchedCategories.length === 0) {
-          throw new Error("No categories found.");
-        } else {
-          // Update
-          setCategories(fetchedCategories);
-        }
-      } catch (error) {
-        alert("An error ocurred: " + error);
+  const fetchCategoriesList = async () => {
+    try {
+      const fetchedCategories = await clientServices.categoriesList();
+      if (!fetchedCategories || fetchedCategories.length === 0) {
+        throw new Error("No categories found.");
+      } else {
+        setCategories(fetchedCategories);
       }
-    };
+    } catch (error) {
+      alert("An error ocurred: " + error);
+    }
+  };
+
+  useEffect(() => {
     fetchCategoriesList();
   }, []); // Dependency array is empty, so it runs only once on mount
+
+  const updateCategories = () => {
+    fetchCategoriesList();
+  };
 
   return (
     <>
@@ -67,11 +70,21 @@ function App() {
             />
             <Route
               path="/form-new-movie"
-              element={<FormNewMovie categories={categories} />}
+              element={
+                <FormNewMovie
+                  categories={categories}
+                  updateMovieList={setMoviesList}
+                />
+              }
             />
             <Route
               path="/form-new-category"
-              element={<FormNewCategory categories={categories} />}
+              element={
+                <FormNewCategory
+                  updateCategories={updateCategories}
+                  categories={categories}
+                />
+              }
             />
             {/* Add Page404 */}
           </Routes>

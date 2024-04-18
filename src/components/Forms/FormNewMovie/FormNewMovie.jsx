@@ -22,15 +22,7 @@ import {
 } from "./FormNewMovieStyle.js";
 import { clientServices } from "../../../service/client-service.js";
 
-export const FormNewMovie = ({ categories }) => {
-  /* const [movieData, setMovieData] = useState({
-    title: "",
-    synopsis: "",
-    releaseYear: "",
-    posterUrl: "",
-    backgroundImageUrl: "",
-  }); */
-
+export const FormNewMovie = ({ categories, updateMovieList }) => {
   const {
     register,
     handleSubmit,
@@ -44,6 +36,7 @@ export const FormNewMovie = ({ categories }) => {
     try {
       const response = await clientServices.registerNewMovie(movieData);
       console.log(response);
+      updateMovieList((prevMovies) => [...prevMovies, movieData]);
     } catch (error) {
       console.error(error);
     }
@@ -54,7 +47,7 @@ export const FormNewMovie = ({ categories }) => {
 
   return (
     <Container as="form" onSubmit={handleSubmitForm}>
-      <TitleForm>New Film</TitleForm>
+      <TitleForm>New Movie</TitleForm>
       <DivInputs>
         <ThemeProvider theme={customTheme(outerTheme)}>
           <TextField
@@ -136,7 +129,9 @@ export const FormNewMovie = ({ categories }) => {
                 <FormHelperText>Must select a category</FormHelperText>
               )}
             </FormControl>
-            <Link to="/form-new-category">
+            <Link
+              to="/form-new-category" /* onClick={() => updateCategories()} */
+            >
               <Fab color="primary" aria-label="add" title="Add new category">
                 <AddIcon />
               </Fab>
@@ -161,4 +156,5 @@ export const FormNewMovie = ({ categories }) => {
 
 FormNewMovie.propTypes = {
   categories: PropTypes.array,
+  updateMovieList: PropTypes.func,
 };

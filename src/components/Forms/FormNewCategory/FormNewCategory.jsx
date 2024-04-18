@@ -15,7 +15,9 @@ import { Button } from "../../Button/Button.jsx";
 import { clientServices } from "../../../service/client-service.js";
 import "./FormNewCategory.css";
 
-export const FormNewCategory = ({ categories }) => {
+export const FormNewCategory = ({ updateCategories, categories }) => {
+  /*  const [categories, setCategories] = useState([]); */
+
   const {
     register,
     handleSubmit,
@@ -24,12 +26,27 @@ export const FormNewCategory = ({ categories }) => {
 
   const outerTheme = useTheme();
 
+  //Function to fetch category list
+  /* const fetchCategories = async () => {
+    try {
+      const categoriesData = await clientServices.categoriesList();
+      setCategories(categoriesData);
+    } catch (error) {
+      console.error("Error fetching categories:", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchCategories();
+  }, []); */
+
   // Function to handle form submission
   const handleSubmitForm = handleSubmit(async (data) => {
     const categoryData = { ...data, id: uuidv4() };
     try {
       const response = await clientServices.registerNewCategory(categoryData);
-      console.log(response);
+      console.log("Response from server: ", response);
+      updateCategories(); // Updated category list after added a new category
     } catch (error) {
       console.error(error);
     }
@@ -81,4 +98,5 @@ export const FormNewCategory = ({ categories }) => {
 
 FormNewCategory.propTypes = {
   categories: PropTypes.array,
+  updateCategories: PropTypes.func,
 };
