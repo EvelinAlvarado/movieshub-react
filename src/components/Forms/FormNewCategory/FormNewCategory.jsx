@@ -15,7 +15,11 @@ import { Button } from "../../Button/Button.jsx";
 import { clientServices } from "../../../service/client-service.js";
 import "./FormNewCategory.css";
 
-export const FormNewCategory = ({ updateCategories, categories }) => {
+export const FormNewCategory = ({
+  updateCategories,
+  categories,
+  onCategoryDeleted,
+}) => {
   /*  const [categories, setCategories] = useState([]); */
 
   const {
@@ -25,20 +29,6 @@ export const FormNewCategory = ({ updateCategories, categories }) => {
   } = useForm();
 
   const outerTheme = useTheme();
-
-  //Function to fetch category list
-  /* const fetchCategories = async () => {
-    try {
-      const categoriesData = await clientServices.categoriesList();
-      setCategories(categoriesData);
-    } catch (error) {
-      console.error("Error fetching categories:", error);
-    }
-  };
-
-  useEffect(() => {
-    fetchCategories();
-  }, []); */
 
   // Function to handle form submission
   const handleSubmitForm = handleSubmit(async (data) => {
@@ -90,7 +80,10 @@ export const FormNewCategory = ({ updateCategories, categories }) => {
         </DivButtons>
       </Container>
       <Container>
-        <CategoriesTable categories={categories} />
+        <CategoriesTable
+          categories={categories}
+          onCategoryDeleted={onCategoryDeleted}
+        />
       </Container>
     </>
   );
@@ -99,4 +92,5 @@ export const FormNewCategory = ({ updateCategories, categories }) => {
 FormNewCategory.propTypes = {
   categories: PropTypes.array,
   updateCategories: PropTypes.func,
+  onCategoryDeleted: PropTypes.func.isRequired,
 };

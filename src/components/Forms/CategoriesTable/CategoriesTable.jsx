@@ -11,6 +11,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
 import MovieIcon from "@mui/icons-material/Movie";
 import Paper from "@mui/material/Paper";
+import { clientServices } from "../../../service/client-service";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -35,13 +36,22 @@ const StyledTableRow = styled(TableRow)(() => ({
   },
 }));
 
-export const CategoriesTable = ({ categories }) => {
+export const CategoriesTable = ({ categories, onCategoryDeleted }) => {
+  const handleDeleteClick = async (id) => {
+    console.log("Deleting category: ", id);
+    try {
+      await clientServices.deleteCategory(id);
+      onCategoryDeleted(id);
+    } catch (error) {
+      console.error("Error deleting category: ", error.message);
+    }
+  };
   return (
     <TableContainer
       component={Paper}
       style={{ margin: "4rem 0", borderRadius: "7px" }}
     >
-      <Table>
+      <Table size="small">
         <TableHead>
           <TableRow>
             <StyledTableCell>Category movie</StyledTableCell>
@@ -64,7 +74,7 @@ export const CategoriesTable = ({ categories }) => {
               </StyledTableCell>
               <StyledTableCell align="center">
                 <IconButton>
-                  <DeleteIcon />
+                  <DeleteIcon onClick={() => handleDeleteClick(category.id)} />
                 </IconButton>
               </StyledTableCell>
             </StyledTableRow>
@@ -78,4 +88,5 @@ export const CategoriesTable = ({ categories }) => {
 CategoriesTable.propTypes = {
   categories: PropTypes.array,
   categoryName: PropTypes.string,
+  onCategoryDeleted: PropTypes.func.isRequired,
 };

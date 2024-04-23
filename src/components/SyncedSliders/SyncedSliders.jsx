@@ -40,7 +40,7 @@ const TitleCategory = styled.h3`
   }
 `;
 
-export const SyncedSliders = ({ moviesList, categories }) => {
+export const SyncedSliders = ({ moviesList, categories, onMovieDeleted }) => {
   const [nav1, setNav1] = useState(null);
   const [nav2, setNav2] = useState(null);
   let sliderRef1 = useRef(null);
@@ -49,7 +49,8 @@ export const SyncedSliders = ({ moviesList, categories }) => {
   useEffect(() => {
     setNav1(sliderRef1);
     setNav2(sliderRef2);
-  }, []);
+    console.log("Movies updated:", moviesList);
+  }, [moviesList]);
 
   const bannerSettings = {
     arrows: false,
@@ -61,6 +62,7 @@ export const SyncedSliders = ({ moviesList, categories }) => {
     slidesToShow: 5,
     swipeToSlide: true,
     focusOnSelect: true,
+    rows: 1,
     afterChange: function (index) {
       console.log(
         `Slider Changed to: ${index + 1}, background: #222; color: #bada55`
@@ -119,8 +121,10 @@ export const SyncedSliders = ({ moviesList, categories }) => {
           {moviesList.map((movie) => (
             <MovieCard
               key={movie.id}
+              id={movie.id}
               posterUrl={movie.posterUrl}
               title={movie.title}
+              onMovieDeleted={onMovieDeleted}
             />
           ))}
         </Slider>
@@ -134,17 +138,27 @@ export const SyncedSliders = ({ moviesList, categories }) => {
             return null;
           }
 
+          let categorySettingsCopy = { ...categorySettings };
+
+          // Disable the infinite option if the movie length is less than 4
+          if (moviesInCategory.length === 1) {
+            categorySettingsCopy.infinite = false;
+          } else {
+            categorySettingsCopy.infinite = true;
+          }
           return (
             <div key={category.id}>
               <TitleCategory style={{ backgroundColor: category.colorPicker }}>
                 {category.categoryName}
               </TitleCategory>
-              <Slider {...categorySettings}>
+              <Slider {...categorySettingsCopy}>
                 {moviesInCategory.map((movie) => (
                   <MovieCard
                     key={movie.id}
+                    id={movie.id}
                     posterUrl={movie.posterUrl}
                     title={movie.title}
+                    onMovieDeleted={onMovieDeleted}
                   />
                 ))}
               </Slider>
@@ -159,4 +173,5 @@ export const SyncedSliders = ({ moviesList, categories }) => {
 SyncedSliders.propTypes = {
   moviesList: PropTypes.array,
   categories: PropTypes.array,
+  onMovieDeleted: PropTypes.func.isRequired,
 };

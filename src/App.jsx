@@ -46,10 +46,27 @@ function App() {
 
   useEffect(() => {
     fetchCategoriesList();
-  }, []); // Dependency array is empty, so it runs only once on mount
+  }, [moviesList]);
 
   const updateCategories = () => {
     fetchCategoriesList();
+  };
+
+  //Handle movie deleted
+  const handleMovieDeleted = (deletedId) => {
+    console.log("Before delete:", moviesList);
+    setMoviesList(moviesList.filter((movie) => movie.id !== deletedId));
+    console.log("After delete:", moviesList);
+  };
+
+  //Handle category deleted
+  const handleCategoryDeleted = (deletedId) => {
+    console.log("Before delete category:", categories);
+    const updatedCategories = categories.filter(
+      (category) => category.id !== deletedId
+    );
+    setCategories([...updatedCategories]);
+    console.log("After delete category:", categories);
   };
 
   return (
@@ -65,6 +82,7 @@ function App() {
                 <SyncedSliders
                   moviesList={moviesList}
                   categories={categories}
+                  onMovieDeleted={handleMovieDeleted}
                 />
               }
             />
@@ -83,6 +101,7 @@ function App() {
                 <FormNewCategory
                   updateCategories={updateCategories}
                   categories={categories}
+                  onCategoryDeleted={handleCategoryDeleted}
                 />
               }
             />

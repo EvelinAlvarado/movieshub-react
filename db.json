@@ -36,19 +36,9 @@
       "colorPicker": "#4e7a48"
     },
     {
-      "id": "6dcc4cb7-9190-49df-866f-47abbc39cfed",
-      "categoryName": "Romance",
-      "colorPicker": "#a79172"
-    },
-    {
-      "id": "1d98f920-fa08-409d-8bbc-411edbfccba9",
-      "categoryName": "Series",
-      "colorPicker": "#3ba1ba"
-    },
-    {
-      "id": "38638b74-8315-4d54-b474-fd3475bd5702",
-      "categoryName": "Sci-fi",
-      "colorPicker": "#9079b9"
+      "id": "04ffcb80-e8ca-4f6f-8f32-35e7f9ba0665",
+      "categoryName": "Serie",
+      "colorPicker": "#ebcc05"
     }
   ],
   "moviesData": [
@@ -91,16 +81,6 @@
       "category": "Action",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTU0NTEzMTIzM15BMl5BanBnXkFtZTcwMDQxMzU1MQ@@._V1_FMjpg_UX550_.jpg",
       "backgroundImageUrl": "https://m.media-amazon.com/images/M/MV5BNjExODU3ZjEtMzBjMy00YjY3LThlZGUtZGFjNmZjMTZlZmI3XkEyXkFqcGdeQXVyMjQwMDg0Ng@@._V1_FMjpg_UX1280_.jpg"
-    },
-    {
-      "id": "5",
-      "title": "Forrest Gump",
-      "synopsis": "The presidencies of Kennedy and Johnson, the Vietnam War, the Watergate scandal, and other historical events unfold from the perspective of an Alabama man with an IQ of 75.",
-      "releaseYear": "1994",
-      "duration": "2h 22min",
-      "category": "Drama",
-      "posterUrl": "https://m.media-amazon.com/images/M/MV5BOWNmNzdjYjQtZjIyOS00MDhiLTg4ZWUtZGZkZDE4ZDQwZTY1XkEyXkFqcGdeQXVyODk2ODI3MTU@._V1_FMjpg_UX960_.jpg",
-      "backgroundImageUrl": "https://m.media-amazon.com/images/M/MV5BMTZkY2NiZmUtMDViYS00ZWNmLTk5MzItZThjZGFmZWZmODU1XkEyXkFqcGdeQXVyNjI5Nzc0MTY@._V1_FMjpg_UX720_.jpg"
     },
     {
       "id": "6",
@@ -183,16 +163,6 @@
       "backgroundImageUrl": "https://m.media-amazon.com/images/M/MV5BZWQ5NzBkZWYtMWMyYS00Nzg2LThhMTEtNTMxOTEwZjM2YTg1XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_FMjpg_UX1280_.jpg"
     },
     {
-      "id": "14",
-      "title": "Anatomy of a Fall",
-      "synopsis": "A woman is suspected of murder after her husband's death; their half-blind son faces a moral dilemma as the main witness.",
-      "releaseYear": "2023",
-      "duration": "2h 31min",
-      "category": "Thriller",
-      "posterUrl": "https://m.media-amazon.com/images/M/MV5BMWU1NGVmOTAtZTQ2My00Mzg3LWIxNzEtYTQ5ZTU1OGRjM2UxXkEyXkFqcGdeQXVyMTY3ODkyNDkz._V1_FMjpg_UX355_.jpg",
-      "backgroundImageUrl": "https://m.media-amazon.com/images/M/MV5BZWRjNmRhZTEtNGIwNS00YTA5LTk0YzMtZmRhNmU2ODkwM2M2XkEyXkFqcGdeQXVyOTc5MDI5NjE@._V1_FMjpg_UX1280_.jpg"
-    },
-    {
       "id": "15",
       "title": "Parasite",
       "synopsis": "Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.",
@@ -253,16 +223,6 @@
       "backgroundImageUrl": "https://m.media-amazon.com/images/M/MV5BMTYzNDc3NzYzOF5BMl5BanBnXkFtZTcwNjQzNTIwNA@@._V1_FMjpg_UX1280_.jpg"
     },
     {
-      "id": "21",
-      "title": "Memento",
-      "synopsis": "A man with short-term memory loss attempts to track down his wife's murderer.",
-      "releaseYear": "2000",
-      "duration": "1h 53min",
-      "category": "Thriller",
-      "posterUrl": "https://m.media-amazon.com/images/M/MV5BZTcyNjk1MjgtOWI3Mi00YzQwLWI5MTktMzY4ZmI2NDAyNzYzXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_FMjpg_UX1022_.jpg",
-      "backgroundImageUrl": "https://m.media-amazon.com/images/M/MV5BZmE2NTgxYTYtNTY1Yi00Yzg1LWI5NjctYTY1MjEwNTg0MzEzXkEyXkFqcGdeQXVyMTI3MDk3MzQ@._V1_FMjpg_UX1280_.jpg"
-    },
-    {
       "id": "dc76d1d7-bb84-40d7-83b8-9513c1cd996d",
       "title": "Harry Potter and the Sorcerer's Stone",
       "releaseYear": "2001",
@@ -273,84 +233,34 @@
       "category": "Drama"
     },
     {
-      "id": "d90ff29f-271e-4607-a143-7e3fdc36d357",
-      "title": "HP",
-      "releaseYear": "2001",
-      "duration": "refrefre",
-      "backgroundImageUrl": "dedddddddddddddd",
-      "posterUrl": "https://m.media-amazon.com/images/M/MV5BNmQ0ODBhMjUtNDRhOC00MGQzLTk5MTAtZDliODg5NmU5MjZhXkEyXkFqcGdeQXVyNDUyOTg3Njg@._V1_FMjpg_UY2902_.jpg",
-      "synopsis": "ddedewf",
-      "category": "Action"
-    },
-    {
-      "id": "a6eeede5-4454-4025-844b-862b0b98bbb5",
-      "title": "HP",
-      "releaseYear": "2001",
-      "duration": "refrefre",
-      "backgroundImageUrl": "dedddddddddddddd",
-      "posterUrl": "https://m.media-amazon.com/images/M/MV5BNmQ0ODBhMjUtNDRhOC00MGQzLTk5MTAtZDliODg5NmU5MjZhXkEyXkFqcGdeQXVyNDUyOTg3Njg@._V1_FMjpg_UY2902_.jpg",
-      "synopsis": "ddedewf",
-      "category": "Action"
-    },
-    {
-      "id": "7f28bb9b-02f6-4c7b-9000-ab9ae903420b",
-      "title": "Shōgun",
+      "id": "9fcaef20-d630-403a-b017-3dd236503654",
+      "title": "Masters of the Air",
       "releaseYear": "2024",
       "duration": "1 season",
-      "backgroundImageUrl": "https://m.media-amazon.com/images/M/MV5BZGFhNzQwNDctMDVmNy00ZGE5LTkzMDgtNmQ1NzFhZTIwZGQ0XkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_FMjpg_UX1280_.jpg",
-      "posterUrl": "https://m.media-amazon.com/images/M/MV5BMzhkNzVkNDYtNmE2Zi00ZTk1LTk2OWYtOTU5NWM5OWQ2Zjc0XkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_FMjpg_UX1200_.jpg",
-      "synopsis": "When a mysterious European ship is found marooned in a nearby fishing village, Lord Yoshii Toranaga discovers secrets that could tip the scales of power and devastate his enemies.",
-      "category": "Series"
+      "backgroundImageUrl": "https://m.media-amazon.com/images/M/MV5BMDcwYjE3OGYtMzRlYy00YzcwLWJjMzAtMWFkMmVlODdhMGZlXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_FMjpg_UX1280_.jpg",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BYzgwNTI2YjAtMDM5Zi00MTAzLThkMmUtNTEyYWY1ODA2ZDdjXkEyXkFqcGdeQXVyMzQ2MDI5NjU@._V1_FMjpg_UY3000_.jpg",
+      "synopsis": "During World War II, five miles above the ground and behind enemy lines, ten men inside an aluminum bomber known as a \"Flying Fortress\" battle antiaircraft fire and unrelenting flocks of German fighters.",
+      "category": "Serie"
     },
     {
-      "id": "c8393b31-3e1e-4e59-b3c9-eccf4a094a30",
-      "title": "Her",
-      "releaseYear": "1013",
-      "duration": "2h 6m",
-      "backgroundImageUrl": "https://m.media-amazon.com/images/M/MV5BNjE3ODc3NTk0N15BMl5BanBnXkFtZTgwNzkwNjM3MDE@._V1_FMjpg_UX1280_.jpg",
-      "posterUrl": "https://m.media-amazon.com/images/M/MV5BMjA1Nzk0OTM2OF5BMl5BanBnXkFtZTgwNjU2NjEwMDE@._V1_FMjpg_UX510_.jpg",
-      "synopsis": "In a near future, a lonely writer develops an unlikely relationship with an operating system designed to meet his every need.",
-      "category": "Sci-fi"
-    },
-    {
-      "id": "6c0cabe0-2e36-4936-97a6-edc17ae8c326",
-      "title": "Dune",
-      "releaseYear": "2021",
-      "duration": "2h 35m",
-      "backgroundImageUrl": "https://m.media-amazon.com/images/M/MV5BOTg4MGFlZGQtNjgzOS00YzU5LWEzNTEtYzJhMmQyZmI0MzFjXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_FMjpg_UX1280_.jpg",
-      "posterUrl": "https://m.media-amazon.com/images/M/MV5BMDQ0NjgyN2YtNWViNS00YjA3LTkxNDktYzFkZTExZGMxZDkxXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_FMjpg_UY2552_.jpg",
-      "synopsis": "A noble family becomes embroiled in a war for control over the galaxy's most valuable asset while its heir becomes troubled by visions of a dark future.",
-      "category": "Sci-fi"
-    },
-    {
-      "id": "20eb32df-d852-4a98-8ce4-693d5fa5d2ce",
-      "title": "3 Body Problem",
-      "releaseYear": "2024",
+      "id": "492cd832-2555-439c-a4ec-85e584217851",
+      "title": "Band of Brothers",
+      "releaseYear": "2001",
       "duration": "1 season",
-      "backgroundImageUrl": "https://m.media-amazon.com/images/M/MV5BYjFlMzkwZDYtN2M3MS00OGRhLWIwMWQtZmE3NzU2YjU5YTFhXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_FMjpg_UX1280_.jpg",
-      "posterUrl": "https://m.media-amazon.com/images/M/MV5BMjNiMDI5YjItNmU0Yy00NmYxLThjYmUtZDc5ODY2ZDI2NzkyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UY2222_.jpg",
-      "synopsis": "A fateful decision made in 1960s China reverberates in the present, where a group of scientists partner with a detective to confront an existential planetary threat.",
-      "category": "Series"
+      "backgroundImageUrl": "https://m.media-amazon.com/images/M/MV5BMjE4NTA1NTA5NV5BMl5BanBnXkFtZTgwOTQyMzY1MTE@._V1_FMjpg_UX2160_.jpg",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTI3ODc2ODc0M15BMl5BanBnXkFtZTYwMjgzNjc3._V1_FMjpg_UX485_.jpg",
+      "synopsis": "The story of Easy Company of the U.S. Army 101st Airborne Division and their mission in World War II Europe, from Operation Overlord to V-J Day.",
+      "category": "Serie"
     },
     {
-      "id": "1835cdd5-7e38-4775-b1f4-9f6a279e6381",
-      "title": "Breaking Bad",
-      "releaseYear": "2008-2013",
-      "duration": "5 seasons",
-      "backgroundImageUrl": "https://m.media-amazon.com/images/M/MV5BMTk2MDk0NzE4OF5BMl5BanBnXkFtZTcwMzk2MzQxOA@@._V1_FMjpg_UX1280_.jpg",
-      "posterUrl": "https://m.media-amazon.com/images/M/MV5BYmQ4YWMxYjUtNjZmYi00MDQ1LWFjMjMtNjA5ZDdiYjdiODU5XkEyXkFqcGdeQXVyMTMzNDExODE5._V1_FMjpg_UY3000_.jpg",
-      "synopsis": "A chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine with a former student in order to secure his family's future.",
-      "category": "Series"
-    },
-    {
-      "id": "05fa7040-5162-4e39-ad49-64789e3df64a",
-      "title": "Back to the Future",
-      "releaseYear": "1985",
-      "duration": "1h 56m",
-      "backgroundImageUrl": "https://m.media-amazon.com/images/M/MV5BMjA4MzI0NzI3MF5BMl5BanBnXkFtZTcwOTc4Mzg0OQ@@._V1_FMjpg_UX1280_.jpg",
-      "posterUrl": "https://m.media-amazon.com/images/M/MV5BZmU0M2Y1OGUtZjIxNi00ZjBkLTg1MjgtOWIyNThiZWIwYjRiXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1218_.jpg",
-      "synopsis": "Marty McFly, a 17-year-old high school student, is accidentally sent 30 years into the past in a time-traveling DeLorean invented by his close friend, the maverick scientist Doc Brown.",
-      "category": "Sci-fi"
+      "id": "9a8b121c-6163-4966-9dbc-df6015863495",
+      "title": "Chernobyl",
+      "releaseYear": "2019",
+      "duration": "1 season",
+      "backgroundImageUrl": "https://m.media-amazon.com/images/M/MV5BMDgyZDM3ZDQtMTUzNy00NjAxLWIwMDgtNWRmMzY4ZDdjOTA0XkEyXkFqcGdeQXVyMTIzMzg5NDU1._V1_FMjpg_UX1280_.jpg",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BNTdkN2QwMDItMDVhNS00ZjFiLWEzNTctMzY5ODQzYWNkMDllXkEyXkFqcGdeQXVyMTMzNDExODE5._V1_FMjpg_UY2250_.jpg",
+      "synopsis": "In April 1986, the city of Chernobyl in the Soviet Union suffers one of the worst nuclear disasters in the history of mankind. Consequently, many heroes put their lives on the line in the following days, weeks and months.",
+      "category": "Serie"
     }
   ]
 }

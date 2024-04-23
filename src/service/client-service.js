@@ -52,10 +52,37 @@ const registerNewCategory = async (categoryData) => {
   }
 };
 
+//Function to delete a client from the server using async/await
+const deleteMovie = async (id) => {
+  try {
+    console.log("Delete to: ", id);
+    const response = await fetch(`http://localhost:3000/moviesData/${id}`, {
+      method: "DELETE",
+    });
+    return response;
+  } catch (error) {
+    throw new Error("Error deleting movie: ", error.message);
+  }
+};
+
+const deleteCategory = async (id) => {
+  try {
+    console.log("Delete category: ", id);
+    const response = await fetch(`http://localhost:3000/categories/${id}`, {
+      method: "DELETE",
+    });
+    return response;
+  } catch (error) {
+    throw new Error("Error deleting category: ", error.message);
+  }
+};
+
 // Exported object containing client-related services
 export const clientServices = {
   moviesList,
   categoriesList,
   registerNewMovie,
   registerNewCategory,
+  deleteMovie,
+  deleteCategory,
 };
