@@ -36,7 +36,11 @@ const StyledTableRow = styled(TableRow)(() => ({
   },
 }));
 
-export const CategoriesTable = ({ categories, onCategoryDeleted }) => {
+export const CategoriesTable = ({
+  categories,
+  onCategoryDeleted,
+  handleEditClick,
+}) => {
   const handleDeleteClick = async (id) => {
     console.log("Deleting category: ", id);
     try {
@@ -46,6 +50,7 @@ export const CategoriesTable = ({ categories, onCategoryDeleted }) => {
       console.error("Error deleting category: ", error.message);
     }
   };
+
   return (
     <TableContainer
       component={Paper}
@@ -69,7 +74,7 @@ export const CategoriesTable = ({ categories, onCategoryDeleted }) => {
               </StyledTableCell>
               <StyledTableCell align="center">
                 <IconButton>
-                  <EditIcon />
+                  <EditIcon onClick={() => handleEditClick(category.id)} />
                 </IconButton>
               </StyledTableCell>
               <StyledTableCell align="center">
@@ -89,4 +94,5 @@ CategoriesTable.propTypes = {
   categories: PropTypes.array,
   categoryName: PropTypes.string,
   onCategoryDeleted: PropTypes.func.isRequired,
+  handleEditClick: PropTypes.func.isRequired,
 };

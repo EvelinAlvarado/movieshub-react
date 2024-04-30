@@ -77,6 +77,31 @@ const deleteCategory = async (id) => {
   }
 };
 
+//Function to fetch category for editing from server using async/await
+const editCategory = async (id) => {
+  try {
+    const response = await fetch(`http://localhost:3000/categories/${id}`);
+    return response.json();
+  } catch (error) {
+    throw new Error("Error fetching category for editing: ", error.message);
+  }
+};
+
+const updateCategory = async (categoryName, colorPicker, id) => {
+  try {
+    const response = await fetch(`http://localhost:3000/categories/${id}`, {
+      method: "PUT", // Specify the HTTP method as PUT
+      headers: {
+        "Content-Type": "application/json", // Set the content type of the request body
+      },
+      body: JSON.stringify({ categoryName, colorPicker }), // Convert data to JSON format
+    });
+    return response;
+  } catch (error) {
+    throw new Error("Error updating category information: ", error.message);
+  }
+};
+
 // Exported object containing client-related services
 export const clientServices = {
   moviesList,
@@ -85,4 +110,6 @@ export const clientServices = {
   registerNewCategory,
   deleteMovie,
   deleteCategory,
+  editCategory,
+  updateCategory,
 };

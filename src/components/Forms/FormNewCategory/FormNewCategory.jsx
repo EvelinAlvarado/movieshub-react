@@ -26,6 +26,7 @@ export const FormNewCategory = ({
     register,
     handleSubmit,
     formState: { errors },
+    setValue, // for editing
   } = useForm();
 
   const outerTheme = useTheme();
@@ -42,6 +43,20 @@ export const FormNewCategory = ({
     }
     console.log(categoryData);
   });
+
+  //Function to handle category edit
+  const handleEditClick = async (id) => {
+    try {
+      const categoryDetails = await clientServices.editCategory(id);
+      // Set Values of the form fields with the category data
+      setValue("categoryName", categoryDetails.categoryName);
+      setValue("colorPicker", categoryDetails.colorPicker);
+      console.log("Editing: ", categoryDetails);
+    } catch (error) {
+      console.error("Error fetching category details: ", error.message);
+    }
+  };
+
   return (
     <>
       <Container as="form" onSubmit={handleSubmitForm}>
@@ -83,6 +98,7 @@ export const FormNewCategory = ({
         <CategoriesTable
           categories={categories}
           onCategoryDeleted={onCategoryDeleted}
+          handleEditClick={handleEditClick}
         />
       </Container>
     </>
@@ -93,4 +109,5 @@ FormNewCategory.propTypes = {
   categories: PropTypes.array,
   updateCategories: PropTypes.func,
   onCategoryDeleted: PropTypes.func.isRequired,
+  onCategoryEdited: PropTypes.func.isRequired,
 };
