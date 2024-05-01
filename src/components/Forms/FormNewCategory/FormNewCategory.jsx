@@ -1,3 +1,4 @@
+import { useState } from "react";
 import PropTypes from "prop-types";
 import { v4 as uuidv4 } from "uuid";
 import { useForm } from "react-hook-form";
@@ -20,29 +21,22 @@ export const FormNewCategory = ({
   categories,
   onCategoryDeleted,
 }) => {
-  /*  const [categories, setCategories] = useState([]); */
+  const [editingCategoryId, setEditingCategoryId] = useState(null);
 
   const {
     register,
     handleSubmit,
     formState: { errors },
     setValue, // for editing
-  } = useForm();
+    reset,
+  } = useForm({
+    defaultValues: {
+      categoryName: "",
+      colorPicker: "#c2c2c2",
+    },
+  });
 
   const outerTheme = useTheme();
-
-  // Function to handle form submission
-  const handleSubmitForm = handleSubmit(async (data) => {
-    const categoryData = { ...data, id: uuidv4() };
-    try {
-      const response = await clientServices.registerNewCategory(categoryData);
-      console.log("Response from server: ", response);
-      updateCategories(); // Updated category list after added a new category
-    } catch (error) {
-      console.error(error);
-    }
-    console.log(categoryData);
-  });
 
   //Function to handle category edit
   const handleEditClick = async (id) => {
@@ -52,10 +46,69 @@ export const FormNewCategory = ({
       setValue("categoryName", categoryDetails.categoryName);
       setValue("colorPicker", categoryDetails.colorPicker);
       console.log("Editing: ", categoryDetails);
+      setEditingCategoryId(id);
     } catch (error) {
       console.error("Error fetching category details: ", error.message);
     }
   };
+
+  // Function to handle category update
+  const handleUpdateCategory = async (data) => {
+    try {
+      const { categoryName, colorPicker } = data;
+      const response = await clientServices.updateCategory(
+        categoryName,
+        colorPicker,
+        editingCategoryId //Use the ID of category in edition
+      );
+      console.log("Category updated successfully: ", response);
+
+      //Update category on each movie to belong a modified category
+      /* const moviesToUpdate = moviesList.filter(
+        (movie) => movie.category === categoryName
+      );
+      moviesToUpdate.forEach(async (movie) => {
+        await clientServices.updateMovieCategory(movie.id, categoryName);
+      }); */
+
+      /* const updatedMoviesList = moviesList.map((movie) => {
+        if (movie.category === categoryName) {
+          return { ...movie, category: categoryName };
+        }
+        return movie;
+      });
+
+      setMoviesList(updatedMoviesList); */
+      updateCategories(); // Update category list after editing
+      setEditingCategoryId(null); //restore
+    } catch (error) {
+      console.error("Error updating category: ", error.message);
+    }
+  };
+
+  // Function to handle form submission
+  const handleSubmitForm = handleSubmit(async (data) => {
+    const categoryData = { ...data, id: uuidv4() };
+    try {
+      if (editingCategoryId) {
+        await handleUpdateCategory(data);
+      } else {
+        const response = await clientServices.registerNewCategory(categoryData);
+        console.log("New category added successfully: ", response);
+        updateCategories(); // Updated category list after added a new category
+      }
+    } catch (error) {
+      console.error("Error adding new category: ", error.message);
+    }
+    console.log(categoryData);
+  });
+
+  // const onClearButton = () => {
+  //   console.log("Clear button clicked");
+  //   setValue("categoryName", "");
+  //   setValue("colorPicker", "#c2c2c2");
+  //   /* setEditingCategoryId(null); */
+  // };
 
   return (
     <>
@@ -79,7 +132,7 @@ export const FormNewCategory = ({
               label="Select a color"
               variant="filled"
               type="color"
-              defaultValue="#c2c2c2"
+              /* defaultValue="#c2c2c2" */
               {...register("colorPicker", {
                 validate: (value) =>
                   value !== "#c2c2c2" || "Please select a color",
@@ -90,8 +143,18 @@ export const FormNewCategory = ({
           </ThemeProvider>
         </DivInputs>
         <DivButtons>
-          <Button buttonText="Save" isPrimaryButton={true} />
-          <Button buttonText="Clear" isPrimaryButton={false} />
+          <Button
+            type="submit"
+            buttonText="Save"
+            isPrimaryButton={true}
+            /* onClick={handleUpdateCategory()} */
+          />
+          <Button
+            type="button"
+            buttonText="Clear"
+            isPrimaryButton={false}
+            onClick={() => reset()}
+          />
         </DivButtons>
       </Container>
       <Container>
@@ -107,6 +170,8 @@ export const FormNewCategory = ({
 
 FormNewCategory.propTypes = {
   categories: PropTypes.array,
+  /* moviesList: PropTypes.array,
+  setMoviesList: PropTypes.array, */
   updateCategories: PropTypes.func,
   onCategoryDeleted: PropTypes.func.isRequired,
   onCategoryEdited: PropTypes.func.isRequired,

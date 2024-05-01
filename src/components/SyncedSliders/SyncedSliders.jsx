@@ -49,8 +49,8 @@ export const SyncedSliders = ({ moviesList, categories, onMovieDeleted }) => {
   useEffect(() => {
     setNav1(sliderRef1);
     setNav2(sliderRef2);
-    console.log("Movies updated:", moviesList);
-  }, [moviesList]);
+    /* console.log("Movies updated:", moviesList); */
+  }, []);
 
   const bannerSettings = {
     arrows: false,

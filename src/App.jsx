@@ -102,6 +102,8 @@ function App() {
                   updateCategories={updateCategories}
                   categories={categories}
                   onCategoryDeleted={handleCategoryDeleted}
+                  /* moviesList={moviesList}
+                  setMoviesList={setMoviesList} */
                 />
               }
             />

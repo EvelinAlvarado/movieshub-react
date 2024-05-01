@@ -16,9 +16,9 @@
       "colorPicker": "#00c86f"
     },
     {
-      "id": "4",
       "categoryName": "Thriller",
-      "colorPicker": "#6b5be2"
+      "colorPicker": "#6b5be2",
+      "id": "4"
     },
     {
       "id": "5",
@@ -26,19 +26,19 @@
       "colorPicker": "#dc6ebe"
     },
     {
-      "id": "d5662862-510b-4aa6-9a13-5995da9bb8e3",
       "categoryName": "Romantic",
-      "colorPicker": "#ca3f3f"
+      "colorPicker": "#ca3f3f",
+      "id": "d5662862-510b-4aa6-9a13-5995da9bb8e3"
     },
     {
-      "id": "ab864e2e-6ea4-435a-b3da-3a24d6b639a2",
       "categoryName": "Comedy",
-      "colorPicker": "#4e7a48"
+      "colorPicker": "#4e7a48",
+      "id": "ab864e2e-6ea4-435a-b3da-3a24d6b639a2"
     },
     {
-      "id": "04ffcb80-e8ca-4f6f-8f32-35e7f9ba0665",
-      "categoryName": "Serie",
-      "colorPicker": "#ebcc05"
+      "categoryName": "dddd",
+      "colorPicker": "#e6c937",
+      "id": "05bf2009-6b3c-4923-8074-9fea1922e73c"
     }
   ],
   "moviesData": [
@@ -240,7 +240,8 @@
       "backgroundImageUrl": "https://m.media-amazon.com/images/M/MV5BMDcwYjE3OGYtMzRlYy00YzcwLWJjMzAtMWFkMmVlODdhMGZlXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_FMjpg_UX1280_.jpg",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BYzgwNTI2YjAtMDM5Zi00MTAzLThkMmUtNTEyYWY1ODA2ZDdjXkEyXkFqcGdeQXVyMzQ2MDI5NjU@._V1_FMjpg_UY3000_.jpg",
       "synopsis": "During World War II, five miles above the ground and behind enemy lines, ten men inside an aluminum bomber known as a \"Flying Fortress\" battle antiaircraft fire and unrelenting flocks of German fighters.",
-      "category": "Serie"
+      "category": "Serie",
+      "categoryName": "Serie"
     },
     {
       "id": "492cd832-2555-439c-a4ec-85e584217851",
@@ -250,7 +251,8 @@
       "backgroundImageUrl": "https://m.media-amazon.com/images/M/MV5BMjE4NTA1NTA5NV5BMl5BanBnXkFtZTgwOTQyMzY1MTE@._V1_FMjpg_UX2160_.jpg",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTI3ODc2ODc0M15BMl5BanBnXkFtZTYwMjgzNjc3._V1_FMjpg_UX485_.jpg",
       "synopsis": "The story of Easy Company of the U.S. Army 101st Airborne Division and their mission in World War II Europe, from Operation Overlord to V-J Day.",
-      "category": "Serie"
+      "category": "Serie",
+      "categoryName": "Serie"
     },
     {
       "id": "9a8b121c-6163-4966-9dbc-df6015863495",
@@ -260,7 +262,8 @@
       "backgroundImageUrl": "https://m.media-amazon.com/images/M/MV5BMDgyZDM3ZDQtMTUzNy00NjAxLWIwMDgtNWRmMzY4ZDdjOTA0XkEyXkFqcGdeQXVyMTIzMzg5NDU1._V1_FMjpg_UX1280_.jpg",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BNTdkN2QwMDItMDVhNS00ZjFiLWEzNTctMzY5ODQzYWNkMDllXkEyXkFqcGdeQXVyMTMzNDExODE5._V1_FMjpg_UY2250_.jpg",
       "synopsis": "In April 1986, the city of Chernobyl in the Soviet Union suffers one of the worst nuclear disasters in the history of mankind. Consequently, many heroes put their lives on the line in the following days, weeks and months.",
-      "category": "Serie"
+      "category": "Serie",
+      "categoryName": "Serie"
     }
   ]
 }

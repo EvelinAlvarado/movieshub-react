@@ -27,13 +27,19 @@ const Btn = styled.button`
   }
 `;
 
-export const Button = ({ toolTip, buttonText, isPrimaryButton, icon }) => {
+export const Button = ({
+  type,
+  toolTip,
+  buttonText,
+  isPrimaryButton,
+  icon,
+}) => {
   const buttonClassName = isPrimaryButton
     ? "primary-button"
     : "secondary-button";
 
   return (
-    <Btn title={toolTip} className={buttonClassName}>
+    <Btn title={toolTip} className={buttonClassName} type={type}>
       {icon && icon}
       {buttonText}
     </Btn>

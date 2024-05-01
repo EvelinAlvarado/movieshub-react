@@ -102,6 +102,25 @@ const updateCategory = async (categoryName, colorPicker, id) => {
   }
 };
 
+// Function to update movie category on the server using async/await
+const updateMovieCategory = async (movieId, newCategoryName) => {
+  try {
+    const response = await fetch(
+      `http://localhost:3000/moviesData/${movieId}`,
+      {
+        method: "PATCH", // Use PATCH method to update specific fields
+        headers: {
+          "Content-Type": "application/json", // Set the content type of the request body
+        },
+        body: JSON.stringify({ categoryName: newCategoryName }), // Convert data to JSON format
+      }
+    );
+    return response;
+  } catch (error) {
+    throw new Error("Error updating movie category name: ", error.message);
+  }
+};
+
 // Exported object containing client-related services
 export const clientServices = {
   moviesList,
@@ -112,4 +131,5 @@ export const clientServices = {
   deleteCategory,
   editCategory,
   updateCategory,
+  updateMovieCategory,
 };

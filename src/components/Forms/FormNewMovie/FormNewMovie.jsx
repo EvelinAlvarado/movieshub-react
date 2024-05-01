@@ -27,6 +27,7 @@ export const FormNewMovie = ({ categories, updateMovieList }) => {
     register,
     handleSubmit,
     control,
+    reset,
     formState: { errors },
   } = useForm();
 
@@ -44,6 +45,12 @@ export const FormNewMovie = ({ categories, updateMovieList }) => {
   });
 
   const outerTheme = useTheme();
+
+  const handleClearForm = () => {
+    console.log("reset");
+
+    reset({});
+  };
 
   return (
     <Container as="form" onSubmit={handleSubmitForm}>
@@ -148,7 +155,11 @@ export const FormNewMovie = ({ categories, updateMovieList }) => {
       </DivInputs>
       <DivButtons>
         <Button buttonText="Save" isPrimaryButton={true} />
-        <Button buttonText="Clear" isPrimaryButton={false} />
+        <Button
+          buttonText="Clear"
+          isPrimaryButton={false}
+          onClick={handleClearForm}
+        />
       </DivButtons>
     </Container>
   );
