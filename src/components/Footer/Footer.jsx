@@ -48,10 +48,13 @@ export const Footer = () => {
         <img src={moviesflixlogo} alt="MoviesFlix Logo" />
       </FooterLogo>
       <SocialMedia>
-        <a href="https://github.com/EvelinAlvarado">
+        <a href="https://github.com/EvelinAlvarado" target="_blank">
           <i className="bi bi-github"></i>
         </a>
-        <a href="https://www.linkedin.com/in/evelinalvarado/?locale=pt_BR">
+        <a
+          href="https://www.linkedin.com/in/evelinalvarado/?locale=pt_BR"
+          target="_blank"
+        >
           <i className="bi bi-linkedin"></i>
         </a>
       </SocialMedia>
