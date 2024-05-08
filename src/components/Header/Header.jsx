@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Button } from "../Button/Button.jsx";
-import moviesflixlogo from "/img/moviesflix-logo.png";
+import movieshublogo from "/img/movieshub-logo.png";
 import { Container } from "../UI/index.js";
 
 const HeaderStyle = styled(Container)`
@@ -25,7 +25,7 @@ export const Header = () => {
   return (
     <HeaderStyle as="header">
       <LogoLink to="/" className="header__logo" href="#">
-        <img src={moviesflixlogo} alt="MoviesFlix Logo" />
+        <img src={movieshublogo} alt="MoviesHub Logo" />
       </LogoLink>
       <Link to="/form-new-movie">
         <Button buttonText="New Movie" />
