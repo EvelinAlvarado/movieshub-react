@@ -15,4 +15,6 @@
   <img src="https://img.shields.io/badge/React_Hook_Form-EC5990?style=for-the-badge&logo=react-hook-form&logoColor=white">
   <img src="https://img.shields.io/badge/React%20Slick-61DAFB?style=for-the-badge&logo=react&logoColor=white">
   <img src="https://img.shields.io/badge/Trello-0052CC?style=for-the-badge&logo=trello&logoColor=white">
+  <img src="https://img.shields.io/badge/uuid-blue?style=for-the-badge&logo=npm&logoColor=white" />
+  <img src="https://img.shields.io/badge/react--icons-green?style=for-the-badge&logo=react&logoColor=white" />
 </div>
